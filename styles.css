@@ -974,6 +974,8 @@ ul {
   text-wrap: balance;
 }
 .whyus__intro b {
+  display: block;
+  margin-bottom: 15px;
   color: var(--heading);
   font-weight: 800;
 }
@@ -1757,5 +1759,8 @@ ul {
   /* whyus intro */
   .whyus__intro {
     font-size: clamp(17px, 4vw, 22px);
+  }
+  .whyus__intro b {
+    margin-bottom: 22px;
   }
 }
