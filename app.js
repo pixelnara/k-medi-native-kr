@@ -181,7 +181,7 @@
       moved = false;
       startX = e.clientX;
       startY = e.clientY;
-      base = baseFor(fIndex);
+      base = baseFor(cloneOffset + fIndex);
     });
     fvp.addEventListener("pointermove", (e) => {
       if (!down) return;
