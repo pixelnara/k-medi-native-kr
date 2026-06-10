@@ -108,7 +108,8 @@ ul {
   text-align: center;
 }
 .c-caption {
-  color: var(--caption);
+  color: var(--heading2);
+  font-weight: 700;
 }
 
 /* Display titles */
