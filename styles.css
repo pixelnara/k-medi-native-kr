@@ -2224,12 +2224,12 @@ ul {
     position: static;
     transform: none;
     background: none;
-    color: rgba(255, 255, 255, 0.75);
-    font-size: var(--text-base);
-    font-weight: 500;
-    letter-spacing: 0.08em;
+    color: rgba(255, 255, 255, 0.88);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    letter-spacing: 0.02em;
     padding: 0;
-    margin-top: var(--space-1);
+    margin-top: var(--space-4);
     gap: var(--space-2px);
   }
   .hero__counter-sep {
@@ -2240,7 +2240,7 @@ ul {
     align-items: center;
     justify-content: center;
     color: rgba(255, 255, 255, 0.65);
-    margin-top: 10px;
+    margin-top: var(--space-4);
     transition: color 0.3s;
   }
   .hero__down svg {
