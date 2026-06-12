@@ -1499,6 +1499,18 @@ ul {
 .gnb-col a.gnb-link--bold {
   font-weight: 550;
 }
+.gnb-sub-head {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--text-subtle);
+  padding-top: var(--space-4);
+  margin-bottom: calc(-1 * var(--space-1));
+}
+.gnb-sub-head:first-child {
+  padding-top: 0;
+}
 @media (hover: hover) {
   .gnb-col a:hover {
     color: var(--text-caption);
@@ -1790,6 +1802,9 @@ ul {
     letter-spacing: var(--tracking-tight);
     line-height: 1.4;
     border-bottom: 1px solid var(--border);
+  }
+  .gnb-sub-head {
+    display: none;
   }
   .stay__grid {
     grid-template-columns: 1fr;
