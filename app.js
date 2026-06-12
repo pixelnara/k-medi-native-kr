@@ -218,7 +218,7 @@
     fvp.addEventListener("dragstart", (e) => e.preventDefault());
 
     window.addEventListener("resize", () => goFeature(fIndex, false));
-    window.requestAnimationFrame(() => goFeature(0, false));
+    window.requestAnimationFrame(() => goFeature(1, false));
   }
 
   /* ---------- Top button ---------- */
