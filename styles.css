@@ -1827,6 +1827,12 @@ ul {
     font-size: var(--text-2xl);
     text-align: center;
   }
+  .compare__col {
+    background: var(--white);
+  }
+  .hiw-card {
+    background: var(--white);
+  }
   .compare__col--ours {
     border: 2px solid var(--blue-500);
   }
