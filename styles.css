@@ -2164,7 +2164,7 @@ ul {
   }
   .header__tagline {
     display: block;
-    font-size: var(--text-sm);
+    font-size: var(--text-base);
     font-weight: 600;
     letter-spacing: var(--tracking-tight);
     text-transform: uppercase;
@@ -2175,6 +2175,7 @@ ul {
     display: flex;
     width: 18px;
     gap: 4px;
+    color: var(--gray-950);
   }
   .menu-btn span {
     height: 1.5px;
@@ -2182,11 +2183,11 @@ ul {
 
   /* Hero — 모바일 전면 재설계 */
   .hero__inner {
-    justify-content: flex-start;
-    padding-top: calc(var(--header-h) + var(--space-8));
-    padding-bottom: calc(72px + var(--space-12));
-    align-items: flex-start;
-    text-align: left;
+    justify-content: center;
+    padding-top: 0;
+    padding-bottom: 0;
+    align-items: center;
+    text-align: center;
   }
   .hero__brand {
     display: none;
@@ -2201,20 +2202,21 @@ ul {
     animation: rise 1s 0.1s forwards;
   }
   .hero__title {
-    margin-top: auto;
-    font-size: 24px;
-    line-height: 1.2;
+    margin-top: 0;
+    font-size: clamp(30px, 9vw, 42px);
+    line-height: 1.15;
     letter-spacing: var(--tracking-tight);
-    text-align: left;
+    text-align: center;
   }
   .hero__desc {
     display: block;
     font-size: var(--text-base);
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(255, 255, 255, 0.95);
     margin-top: var(--space-4);
-    font-weight: 300;
+    font-weight: 500;
     line-height: 1.75;
-    max-width: 100%;
+    max-width: 75%;
+    text-align: center;
   }
   .hero__desc--strong {
     font-weight: 300;
@@ -2247,58 +2249,57 @@ ul {
     left: 0;
     right: 0;
     z-index: 500;
-    height: 72px;
+    height: 76px;
     background: var(--white);
-    border-top: 1px solid var(--border);
-    box-shadow: 0 -2px 20px rgba(0, 0, 0, 0.07);
+    border-top: none;
+    border-radius: 22px 22px 0 0;
+    box-shadow: 0 -4px 28px rgba(0, 0, 0, 0.13);
     align-items: center;
     justify-content: space-around;
-    padding: 0 var(--space-3);
+    padding: 0 var(--space-4);
     padding-bottom: env(safe-area-inset-bottom, 0px);
   }
   .mbar-btn {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3px;
+    gap: 0;
     padding: var(--space-2) var(--space-3);
-    color: var(--text-subtle);
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 0.02em;
+    color: var(--gray-800);
+    font-size: 0;
     min-width: 44px;
     transition: color 0.2s;
     text-decoration: none;
   }
   .mbar-btn svg {
-    width: 22px;
-    height: 22px;
+    width: 20px;
+    height: 20px;
     flex-shrink: 0;
   }
   .mbar-btn:hover,
   .mbar-btn.is-active {
-    color: var(--accent-dark);
+    color: var(--gray-950);
   }
   .mbar-logo {
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: var(--font-sans);
-    font-size: 10px;
+    font-size: 11px;
     font-weight: 800;
     letter-spacing: 0.14em;
     text-decoration: none;
-    background: var(--text-heading);
+    background: var(--gray-950);
     color: var(--white);
-    padding: 10px 16px;
-    border-radius: var(--radius-pill);
+    padding: 12px 16px;
+    border-radius: 4px;
     line-height: 1;
     text-transform: uppercase;
     white-space: nowrap;
     transition: background 0.2s;
   }
   .mbar-logo:hover {
-    background: var(--accent-dark);
+    background: var(--gray-800);
   }
   /* Language bottom sheet */
   .lang-sheet.is-open {
