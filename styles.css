@@ -1460,6 +1460,8 @@ ul {
   text-align: center;
   margin-bottom: var(--space-10);
 }
+.mo-br { display: none; }
+
 .services__intro {
   text-align: center;
   font-family: var(--font-sans);
@@ -1751,6 +1753,7 @@ ul {
   .services__intro {
     font-size: clamp(16px, 4vw, 20px);
   }
+  .mo-br { display: inline; }
 
   /* CTA */
   .cta-dark__desc {
@@ -1765,6 +1768,9 @@ ul {
   /* Compare grid — already has 760px rule, keep here for safety */
   .compare {
     grid-template-columns: 1fr;
+  }
+  .compare__title {
+    font-size: var(--text-lg);
   }
 
   /* Footer */
