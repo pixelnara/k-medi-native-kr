@@ -158,23 +158,40 @@
     function wrapIndex(i) {
       return ((i % slideCount) + slideCount) % slideCount;
     }
-    let wrapTimer = null;
+
+    // isWrapping: true while the clone-to-real teleport hasn't happened yet.
+    // New drags are blocked during this window to keep `base` consistent.
+    let isWrapping = false;
+    let wrapFallback = null;
+
+    function finishWrap() {
+      if (!isWrapping) return;
+      isWrapping = false;
+      clearTimeout(wrapFallback);
+      setTranslate(baseFor(cloneOffset + fIndex), false);
+    }
+
+    ftrack.addEventListener("transitionend", (e) => {
+      if (e.propertyName === "transform") finishWrap();
+    });
+
     function goFeature(i, anim) {
-      // When wrapping around (i out of [0, slideCount)), animate through the
-      // clone on that side, then silently teleport to the real slide position.
       const shouldAnimate = anim !== false;
       const needsClone = shouldAnimate && (i < 0 || i >= slideCount);
       const visualIdx = needsClone ? cloneOffset + i : cloneOffset + wrapIndex(i);
       fIndex = wrapIndex(i);
 
+      if (needsClone) {
+        isWrapping = true;
+        clearTimeout(wrapFallback);
+        wrapFallback = setTimeout(finishWrap, 700); // safety net if transitionend misfires
+      } else {
+        isWrapping = false;
+        clearTimeout(wrapFallback);
+      }
+
       setTranslate(baseFor(visualIdx), shouldAnimate);
       fDots.forEach((d, k) => d.classList.toggle("is-active", k === fIndex));
-
-      if (needsClone) {
-        clearTimeout(wrapTimer);
-        const targetReal = cloneOffset + fIndex;
-        wrapTimer = setTimeout(() => setTranslate(baseFor(targetReal), false), 620);
-      }
     }
     fDots.forEach((d, k) => d.addEventListener("click", () => goFeature(k)));
 
@@ -189,6 +206,7 @@
       moved = false;
     fvp.addEventListener("pointerdown", (e) => {
       if (e.pointerType === "mouse" && e.button !== 0) return;
+      if (isWrapping) return; // wait for infinite-loop teleport to finish
       down = true;
       decided = false;
       horiz = false;
