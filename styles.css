@@ -2505,7 +2505,7 @@ ul {
     padding: 0 8px;
   }
   .mbar-logo__name {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 800;
     letter-spacing: 0.14em;
     text-transform: uppercase;
@@ -2527,7 +2527,7 @@ ul {
     background: var(--gray-950);
     border: none;
     border-radius: 4px;
-    padding: 0 20px;
+    padding: 0 24px;
     height: 60px;
     flex: none;
     gap: 7px;
