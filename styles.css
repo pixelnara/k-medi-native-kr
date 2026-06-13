@@ -399,6 +399,9 @@ ul {
   height: 22px;
 }
 
+/* 모바일 헤더 로고 아래 서브타이틀 */
+.brand-sub-mobile { display: none; }
+
 .header-lang-btn {
   display: none;
   align-items: center;
@@ -2212,9 +2215,38 @@ ul {
     font-weight: 800;
     letter-spacing: 0.1em;
     color: var(--gray-950);
+    line-height: 1.1;
+  }
+  .brand-sub-mobile {
+    display: block;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    color: var(--gray-500);
+    margin-top: 3px;
+    text-transform: none;
+    opacity: 1;
   }
   .header__tagline {
     display: none;
+  }
+  .gnb-overlay__close {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 20%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 600;
+    color: var(--gray-950);
+    background: var(--bg-white);
+    font-size: 0;
+  }
+  .gnb-overlay__close svg {
+    width: 22px;
+    height: 22px;
   }
   .header-bell {
     display: flex;
