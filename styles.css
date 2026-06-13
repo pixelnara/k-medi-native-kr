@@ -389,6 +389,15 @@ ul {
   width: 100%;
   transition: 0.3s;
 }
+.header-bell {
+  display: none;
+  color: inherit;
+  padding: 4px;
+}
+.header-bell svg {
+  width: 22px;
+  height: 22px;
+}
 
 /* scrolled / solid state */
 .header.is-solid {
@@ -2173,6 +2182,9 @@ ul {
     text-transform: uppercase;
     color: inherit;
     white-space: nowrap;
+  }
+  .header-bell {
+    display: flex;
   }
   .menu-btn {
     display: flex;
