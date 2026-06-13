@@ -1604,7 +1604,7 @@ ul {
   line-height: 2.1;
 }
 .gnb-col a.gnb-link--bold {
-  font-weight: 550;
+  font-weight: 500;
 }
 .gnb-sub-head {
   font-size: var(--text-13);
