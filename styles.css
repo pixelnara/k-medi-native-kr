@@ -403,15 +403,19 @@ ul {
   display: none;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  border: 1.5px solid var(--gray-300);
+  width: 22px;
+  height: 22px;
   padding: 0;
   background: transparent;
   cursor: pointer;
 }
-.header-lang-flag { font-size: 18px; line-height: 1; }
+.header-lang-code {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: var(--gray-950);
+  line-height: 1;
+}
 
 /* v1/v2 toggle — default: v1 visible, v2 hidden */
 .header-right--v2 { display: none; }
