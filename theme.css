@@ -38,25 +38,25 @@
   --font-sans: Optima, Candara, "Pretendard", source-sans-pro, sans-serif;
 
   --text-10: 10px;
-  --text-xs: 11px;
+  --text-11: 11px;
   --text-12: 12.5px;
-  --text-sm: 13px;
+  --text-13: 13px;
   --text-14: 14px;
-  --text-base: 15px;
-  --text-md: 17px;
+  --text-15: 15px;
+  --text-17: 17px;
   --text-18: 18px;
-  --text-lg: 19px;
+  --text-19: 19px;
   --text-21: 21px;
   --text-23: 23px;
   --text-24: 24px;
-  --text-xl: 25px;
-  --text-2xl: 28px;
+  --text-25: 25px;
+  --text-28: 28px;
   --text-30: 30px;
-  --text-3xl: clamp(24px, 2.4vw, 34px);
-  --text-4xl: clamp(30px, 3.4vw, 46px);
-  --text-5xl: clamp(38px, 5.4vw, 76px);
-  --text-6xl: clamp(56px, 5vw, 80px);
-  --text-hero: clamp(44px, 6.6vw, 104px);
+  --text-34: clamp(24px, 2.4vw, 34px);
+  --text-46: clamp(30px, 3.4vw, 46px);
+  --text-76: clamp(38px, 5.4vw, 76px);
+  --text-80: clamp(56px, 5vw, 80px);
+  --text-104: clamp(44px, 6.6vw, 104px);
 
   /* ─── Primitive: Letter Spacing ─── */
 
