@@ -76,6 +76,9 @@ ul {
   color: var(--text-heading);
   font-weight: 700;
 }
+.c-highlight {
+  color: var(--blue-500);
+}
 
 /* Display titles */
 .display {
@@ -1133,6 +1136,9 @@ ul {
   color: var(--text-heading);
   font-weight: 700;
 }
+.whyus__intro b.c-highlight {
+  color: var(--blue-500);
+}
 .compare {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1389,7 +1395,7 @@ ul {
    CTA DARK SECTION
    ============================================================ */
 .cta-dark {
-  background: var(--bg-blue);
+  background: linear-gradient(135deg, #355e3b 0%, #2d7a52 40%, #3a9e72 70%, #4db88a 100%);
   color: var(--white);
   padding: clamp(64px, 9vw, 132px) 0;
 }
@@ -1423,7 +1429,7 @@ ul {
 }
 .cta-dark .btn:hover {
   background: var(--white);
-  color: var(--bg-black);
+  color: #42926e;
 }
 
 /* ============================================================
