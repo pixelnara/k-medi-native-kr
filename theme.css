@@ -62,6 +62,17 @@
   --violet-800: #1f1957; /* 더 딥 */
   --violet-900: #151132; /* 최심 다크 */
 
+  /* ── Gold Scale (#b08e31 기준) ── */
+  --gold-100: #fbf3d1;
+  --gold-200: #f4e1a3;
+  --gold-300: #e8c76f;
+  --gold-400: #d9ad3f;
+  --gold-500: #b08e31;
+  --gold-600: #8b6f26;
+  --gold-700: #6b511c;
+  --gold-800: #483613;
+  --gold-900: #241a0a;
+
   /* ─── Primitive: Typography ─── */
 
   --font-sans: Optima, Candara, "Pretendard", source-sans-pro, sans-serif;
