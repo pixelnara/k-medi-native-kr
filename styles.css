@@ -1837,11 +1837,6 @@ ul {
   line-height: 2;
   letter-spacing: 0;
 }
-/* nested sub-list (시술 하위) — always visible when parent Beauty Concierge is open */
-.gnb-has-sub.is-open .gnb-sub-list .gnb-sub-list {
-  display: flex;
-  margin-top: var(--space-4);
-}
 @media (hover: hover) {
   .gnb-col a:hover {
     text-decoration: underline;
