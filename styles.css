@@ -2001,7 +2001,7 @@ ul {
 .hiw-card__step {
   font-family: var(--font-sans);
   color: var(--text-heading);
-  font-size: var(--text-18);
+  font-size: var(--text-23);
   font-weight: 700;
   letter-spacing: var(--tracking-tight);
   margin-bottom: var(--space-16);
@@ -2962,7 +2962,7 @@ ul {
     margin-top: 0;
   }
   .compare__list b {
-    font-size: var(--text-17);
+    font-size: var(--text-20);
   }
   .compare__list li > div > span {
     font-size: var(--text-14);
