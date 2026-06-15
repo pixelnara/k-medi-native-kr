@@ -2040,7 +2040,7 @@ ul {
   }
   .hiw-card {
     display: grid;
-    grid-template-columns: 34px 1fr;
+    grid-template-columns: 40px 1fr;
     grid-template-rows: auto auto;
     column-gap: var(--space-20);
     row-gap: var(--space-12);
@@ -2053,8 +2053,8 @@ ul {
   .hiw-card__icon {
     grid-column: 1;
     grid-row: 1;
-    width: 34px;
-    height: 34px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background: transparent;
     margin-bottom: 0;
@@ -2071,8 +2071,8 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 34px;
-    height: 34px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background: var(--accent-dark);
     color: var(--white);
