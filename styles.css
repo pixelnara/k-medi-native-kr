@@ -1802,6 +1802,7 @@ ul {
   padding-top: var(--space-80);
   padding-bottom: var(--space-40);
   margin-top: calc(var(--space-80) * -1);
+  border-top: none;
 }
 .gnb-col > h4 {
   font-family: var(--font-sans);
