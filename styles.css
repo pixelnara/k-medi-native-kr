@@ -2228,7 +2228,6 @@ ul {
 }
 /* Mobile: icon+step list */
 .hiw__grid {
-  display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0;
   border-top: 1px solid var(--border);
