@@ -1718,6 +1718,9 @@ ul {
 }
 /* Dark theme variant — desktop only (861px+) */
 @media (min-width: 861px) {
+  /* 데스크탑: 모바일 복사본 숨김, sub-row 마이페이지 표시 */
+  .gnb-col--mypage-mobile { display: none; }
+  .gnb-col--mypage:not(.gnb-col--mypage-mobile) { display: block; }
   .gnb-overlay--dark {
     background: var(--gray-950);
     color: var(--white);
@@ -2565,6 +2568,9 @@ ul {
     padding-bottom: 0;
     border-top: none;
   }
+  /* 모바일: 상단 복사본 표시, sub-row 마이페이지 숨김 */
+  .gnb-col--mypage-mobile { display: block; }
+  .gnb-col--mypage:not(.gnb-col--mypage-mobile) { display: none; }
   /* depth2: 패널 — 기본 숨김 */
   .gnb-col ul {
     display: none;
