@@ -1860,6 +1860,11 @@ ul {
 .gnb-overlay.is-open {
   transform: none;
 }
+html:has(.gnb-overlay.is-open),
+body:has(.gnb-overlay.is-open) {
+  overflow: hidden;
+}
+
 /* Dark theme variant — desktop only (861px+) */
 @media (min-width: 861px) {
   /* 데스크탑: 모바일 복사본 숨김, sub-row 마이페이지 표시 */
