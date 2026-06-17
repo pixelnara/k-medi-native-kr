@@ -879,6 +879,7 @@ input[type="password"].login-modal__input {
   animation: rise 1s 0.35s forwards;
 }
 .hero__desc {
+  font-family: var(--font-sans);
   margin-top: 30px;
   font-size: var(--text-30);
   font-weight: 500;
