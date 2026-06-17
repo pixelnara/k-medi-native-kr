@@ -1719,8 +1719,12 @@ ul {
 /* Dark theme variant — desktop only (861px+) */
 @media (min-width: 861px) {
   /* 데스크탑: 모바일 복사본 숨김, sub-row 마이페이지 표시 */
-  .gnb-col--mypage-mobile { display: none; }
-  .gnb-col--mypage:not(.gnb-col--mypage-mobile) { display: block; }
+  .gnb-col--mypage-mobile {
+    display: none;
+  }
+  .gnb-col--mypage:not(.gnb-col--mypage-mobile) {
+    display: block;
+  }
   .gnb-overlay--dark {
     background: var(--gray-950);
     color: var(--white);
@@ -2569,8 +2573,12 @@ ul {
     border-top: none;
   }
   /* 모바일: 상단 복사본 표시, sub-row 마이페이지 숨김 */
-  .gnb-col--mypage-mobile { display: block; }
-  .gnb-col--mypage:not(.gnb-col--mypage-mobile) { display: none; }
+  .gnb-col--mypage-mobile {
+    display: block;
+  }
+  .gnb-col--mypage:not(.gnb-col--mypage-mobile) {
+    display: none;
+  }
   /* depth2: 패널 — 기본 숨김 */
   .gnb-col ul {
     display: none;
@@ -3066,9 +3074,9 @@ ul {
     text-transform: uppercase;
   }
   .mbar-label {
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 600;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.02em;
     color: inherit;
     white-space: nowrap;
   }
