@@ -217,23 +217,42 @@
 <!-- ============================== HERO ============================== -->
 <section class="hero">
   <div class="hero__slides">
-    <div class="hero__slide" style="background-image:url('assets/man-hotel.png')"></div>
+    <!-- 1번 고정: 브랜드 메시지 -->
+    <div class="hero__slide" style="background-image:url('assets/hero-13.png')"
+         data-title="의료부터 관광까지<br/>모든 케어"
+         data-desc="전담 코디네이터가 특별한 한국 여행을 완성합니다."></div>
+    <div class="hero__slide" style="background-image:url('assets/hero-man-hotel.png')"
+         data-title="퍼스널 컨시어지<br/>토탈 서비스"
+         data-desc="체크인부터 귀국까지 전담 코디네이터가 함께합니다"></div>
+    <!-- 2.뷰티 -->
     <div class="hero__slide hero__slide--event"
-         style="background-image:url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1200&q=80')"
+         style="background-image:url('assets/hero-5.png')"
          data-title="여름 K-뷰티<br/>스페셜 이벤트"
-         data-desc="첫 방문 고객 10% 할인 · 지금 신청하세요"></div>
-    <div class="hero__slide" style="background-image:url('https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=1920&q=80&auto=format&fit=crop')"></div>
-    <div class="hero__slide" style="background-image:url('https://plus.unsplash.com/premium_photo-1658506638425-25dc93218082?q=80&w=3047&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"></div>
-    <div class="hero__slide" style="background-image:url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=2000&q=80')"></div>
-    <div class="hero__slide" style="background-image:url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=2000&q=80')"></div>
-    <div class="hero__slide" style="background-image:url('assets/gung.jpeg')"></div>
-    <div class="hero__slide" style="background-image:url('https://images.unsplash.com/photo-1506816561089-5cc37b3aa9b0?auto=format&fit=crop&w=2000&q=80')"></div>
+         data-desc="첫 방문 고객 10% 할인 · 지금 신청하세요">
+    </div>
+    <!-- 3.의료 -->
+    <div class="hero__slide" style="background-image:url('assets/hero-2.png')"
+         data-title="메디컬 컨시어지<br/>전담 케어"
+         data-desc="전문 의료진이 당신만을 위한 맞춤 솔루션을 제안합니다"></div>
+    <!-- 4.여행 -->
+    <div class="hero__slide" style="background-image:url('assets/hero-11.png')"
+         data-title="한국의 전통<br/>문화 체험"
+         data-desc="한복과 전통 공연으로 만나는 진짜 한국의 매력"></div>
+    <div class="hero__slide" style="background-image:url('assets/hero-15.png')"
+         data-title="서울의 아름다움<br/>그 중심에서"
+         data-desc="한국의 전통과 현대가 어우러진 특별한 시간"></div>
+    <div class="hero__slide" style="background-image:url('assets/hero-7.png')"
+         data-title="역사와 문화<br/>깊이 있는 여행"
+         data-desc="경복궁에서 시작되는 진정한 한국 문화 탐방"></div>
+    <div class="hero__slide" style="background-image:url('assets/hero-gung.jpeg')"
+         data-title="천년의 역사<br/>고궁 투어"
+         data-desc="조선의 아름다움을 간직한 고궁에서의 특별한 경험"></div>
+    <div class="hero__slide hero__slide--mobile-only" style="background-image:url('assets/hero-tour-pro-mo_1.png')"
+         data-desc="호텔과 컨시어지, 우대 혜택으로 더 탁월한 경험을"></div>
   <div class="hero__overlay"></div>
-  <div class="hero__event-deco" aria-hidden="true">EVENT</div>
   <div class="hero__inner wrap">
-    <div class="hero__event-badge" aria-hidden="true">✦ K-BEAUTY EVENT</div>
-    <h1 class="hero__title">의료부터 관광까지<br/>모든 케어</h1>
-    <p class="hero__desc">전담 코디네이터가<br class="hero-desc-br"> 특별한 한국 여행을 완성합니다.</p>
+    <h1 class="hero__title"></h1>
+    <p class="hero__desc"></p>
     <div class="hero__counter" aria-live="polite">
       <span class="hero__counter-cur">01</span>
       <span class="hero__counter-sep"> / </span>
@@ -244,6 +263,12 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
     </a>
   </div>
+  <button class="hero__nav hero__nav--prev" aria-label="이전 슬라이드">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><polyline points="15 18 9 12 15 6"/></svg>
+  </button>
+  <button class="hero__nav hero__nav--next" aria-label="다음 슬라이드">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><polyline points="9 18 15 12 9 6"/></svg>
+  </button>
   <a href="#booking" class="hero__cta">상담 예약하기</a>
 </section>
 

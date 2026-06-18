@@ -84,7 +84,7 @@
   }
 
   /* ---------- Hero slider ---------- */
-  const slides = [...document.querySelectorAll(".hero__slide")];
+  const slides = [...document.querySelectorAll(".hero__slide")].filter(s => getComputedStyle(s).display !== 'none');
   const counterCur = document.querySelector(".hero__counter-cur");
   const counterTot = document.querySelector(".hero__counter-tot");
   const heroSection = document.querySelector(".hero");
@@ -99,8 +99,6 @@
     slides.forEach((s, k) => s.classList.toggle("is-active", k === cur));
     if (counterCur) counterCur.textContent = String(cur + 1).padStart(2, '0');
     const slide = slides[cur];
-    const isEvent = slide.classList.contains("hero__slide--event");
-    if (heroSection) heroSection.classList.toggle("hero--event", isEvent);
     if (heroTitle) heroTitle.innerHTML = slide.dataset.title || defaultTitle;
     if (heroDesc) heroDesc.innerHTML = slide.dataset.desc || defaultDesc;
   }
@@ -129,6 +127,12 @@
       play();
     }, { passive: true });
   }
+
+  /* hero nav buttons */
+  const heroNavPrev = document.querySelector(".hero__nav--prev");
+  const heroNavNext = document.querySelector(".hero__nav--next");
+  if (heroNavPrev) heroNavPrev.addEventListener("click", () => { stop(); go(cur - 1); play(); });
+  if (heroNavNext) heroNavNext.addEventListener("click", () => { stop(); go(cur + 1); play(); });
 
   /* ---------- Booking widget tabs ---------- */
   const bkTabs = [...document.querySelectorAll(".booking__tab")];
