@@ -1,6 +1,6 @@
 /* ============================================================
    ABOUT — Page-Specific Styles
-   Depends on: theme.css (tokens), styles.css (base/header/footer)
+   Depends on: reset.css · theme.css (tokens) · common.css (base/header/footer)
    Breakpoints: 1080px · 860px · 600px
    ============================================================ */
 
