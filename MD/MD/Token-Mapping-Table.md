@@ -25,7 +25,7 @@
 | `--text-gray-6` | `--gray-900` | #1a1e28 | ✓ | 헤딩 전반, link-arrow, btn outline, gnb, compare title | 최다 사용 |
 | `--text-gray-7` | `--gray-950` | #101219 | ✓ | 최강 강조 — 모바일 헤더, login modal 제목 | |
 | `--text-white` | `--white` | #ffffff | ✓ | 다크/컬러 배경 위 흰색 — hero, trust, cta-dark, hiw | |
-| `--text-caption` | `--violet-500` | #3b33d9 | ✓ | eyebrow, kicker, bk-label, booking tab underline | accent-mid와 동일값 |
+| `--text-caption` | `--violet-500` | #3b33d9 | ✓ | eyebrow, kicker, bk-label, booking tab underline | accent-blue1와 동일값 |
 | `--rating` | `--amber-400` | #d9ad3f | ✓ | 별점 (review__star, treat-card__en) | |
 | `--border-gray-1` | `--gray-200` | #dcdfe5 | ✓ | 기본 구분선 (card, feature, gnb, hiw-grid) | 최다 사용 |
 | `--border-gray-2` | `--gray-300` | #b8bdc7 | ✓ | 연한 구분선 (mobile gnb) | |
@@ -33,9 +33,9 @@
 | `--border-gray-4` | `--gray-800` | #292e3d | ✓ | 강조 보더 (cnav-btn, filter chip) | |
 | `--btn-primary` | `--gray-950` | #101219 | ✓ | btn--solid, btn--primary bg, filter.is-active | |
 | `--btn-secondary` | `--violet-600` | #2e26b5 | ✓ | btn--primary:hover 배경 | |
-| `--accent-mid` | `--violet-500` | #3b33d9 | ✓ | feature dots active, stay-card tags bg, services acc-icon | text-caption과 동일값 |
-| `--accent-dark1` | `--violet-700` | #2a2287 | ✓ | services acc open head, btn--primary2, hiw icon, proc-sheet, about btn | |
-| `--accent-dark2` | `--violet-800` | #1f1957 | ✓ | compare__col--ours bg, footer__bottom, btn--primary2:hover | |
+| `--accent-blue1` | `--violet-500` | #3b33d9 | ✓ | feature dots active, stay-card tags bg, services acc-icon | text-caption과 동일값 |
+| `--accent-blue2` | `--violet-700` | #2a2287 | ✓ | services acc open head, btn--primary2, hiw icon, proc-sheet, about btn | |
+| `--accent-blue3` | `--violet-800` | #1f1957 | ✓ | compare__col--ours bg, footer__bottom, btn--primary2:hover | |
 | `--accent-gradient` | violet-900→500 | gradient | ✓ | cta-dark 섹션 전체 배경 | |
 | `--btn-kakao` | `--kakao-yellow` | #fee500 | ✓ | login-modal Kakao 버튼 배경 | 소셜 전용 |
 | `--btn-kakao-text` | `--kakao-dark` | #191919 | ✓ | login-modal Kakao 버튼 텍스트 | 소셜 전용 |
@@ -65,10 +65,10 @@
 | `--violet-50`~`--violet-200` | — | — | — | Palette |
 | `--violet-300` | #8681e4 | — | about.css (직접) | accent-light 삭제 후 직접 참조 |
 | `--violet-400` | #6861e0 | — | — | Palette |
-| `--violet-500` | #3b33d9 | `--text-caption`, `--accent-mid` | — | 이중 매핑 |
+| `--violet-500` | #3b33d9 | `--text-caption`, `--accent-blue1` | — | 이중 매핑 |
 | `--violet-600` | #2e26b5 | `--btn-secondary` | home.css (직접) | why-journey icon wrap bg + sub color |
-| `--violet-700` | #2a2287 | `--accent-dark1` | — | |
-| `--violet-800` | #1f1957 | `--accent-dark2` | — | |
+| `--violet-700` | #2a2287 | `--accent-blue2` | — | |
+| `--violet-800` | #1f1957 | `--accent-blue3` | — | |
 | `--violet-900` | #151132 | `--accent-gradient` (내부) | — | |
 | `--amber-400` | #d9ad3f | `--rating` | — | |
 | `--amber-100`~`--amber-900` | — | — | — | Palette (`--amber-400` 외 미사용) |
@@ -125,9 +125,9 @@ semantic 없이 CSS 파일에서 primitive를 직접 참조하는 항목. 삭제
 | `--btn` | → `--btn-primary` | `--btn-primary` |
 | `--accent` | 0건 · 미사용 | — |
 | `--accent-light` | 1건 · 저사용 | `--violet-300` 직접 참조 |
-| `--accent-dark` | → `--accent-dark1` | `--accent-dark1` |
+| `--accent-dark` | → `--accent-blue2` | `--accent-blue2` |
 | `--accent-hover` | → `--btn-secondary` (Button 카테고리) | `--btn-secondary` |
-| `--accent-deep` | → `--accent-dark2` | `--accent-dark2` |
+| `--accent-deep` | → `--accent-blue3` | `--accent-blue3` |
 
 ---
 
@@ -155,7 +155,7 @@ semantic 없이 CSS 파일에서 primitive를 직접 참조하는 항목. 삭제
 | — Text | 10 (text-gray-1~7, text-white, text-caption, rating) |
 | — Border | 4 (border-gray-1~4) |
 | — Button | 2 (btn-primary, btn-secondary) |
-| — Accent | 4 (accent-mid, dark1, dark2, gradient) |
+| — Accent | 4 (accent-blue1, dark1, dark2, gradient) |
 | — Social | 2 (btn-kakao, btn-kakao-text) |
 | Direct Primitive Usage | **4건** (violet-300 · gold-600 · violet-600×2 · 의도적) |
 | Hard-coded rgba | ~20건 (의도된 투명도 · 유지) |
