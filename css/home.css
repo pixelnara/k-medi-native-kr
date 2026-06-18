@@ -774,6 +774,9 @@
   .why-cta {
     margin-top: 0;
   }
+  #whyus.section {
+    padding-bottom: 0;
+  }
   .why-journey__icon-item,
   .why-journey__icon-item:nth-child(odd),
   .why-journey__icon-item:nth-child(even) {
