@@ -30,12 +30,6 @@
 .hero__slide::after {
   content: none;
 }
-.absolute {
-  position: absolute;
-}
-.inset-0 {
-  inset: 0;
-}
 .hero__overlay {
   position: absolute;
   inset: 0;
@@ -52,17 +46,6 @@
   align-items: center;
   text-align: center;
   padding-top: var(--header-h);
-}
-.hero__eyebrow {
-  font-family: var(--font-sans);
-  font-size: var(--text-15);
-  letter-spacing: var(--tracking-wide);
-  text-transform: uppercase;
-  font-weight: 600;
-  margin-bottom: 26px;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: rise 0.9s 0.2s forwards;
 }
 .hero__title {
   font-family: var(--font-sans);
@@ -88,14 +71,7 @@
   transform: translateY(20px);
   animation: rise 1s 0.55s forwards;
 }
-.hero__desc--strong {
-  font-weight: 300;
-  color: rgba(255, 255, 255, 0.92);
-}
 .hero__cta {
-  display: none;
-}
-.hero__brand {
   display: none;
 }
 
@@ -177,9 +153,6 @@
   font-weight: 900;
 }
 
-.hero__down {
-  display: none;
-}
 .hero__scroll {
   display: none;
   position: absolute;
@@ -310,13 +283,6 @@
   height: auto;
   width: 100%;
   min-width: 170px;
-}
-
-.bk-dining-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr auto;
-  gap: 0;
-  align-items: stretch;
 }
 
 /* ============================================================
@@ -699,7 +665,7 @@
   font-weight: 500;
   line-height: 1.55;
   max-width: 1400px;
-  margin: 0 auto clamp(44px, 5vw, 70px);
+  margin: 0 auto 40px;
   text-wrap: balance;
 }
 .whyus__intro b {
@@ -714,11 +680,8 @@
 
 /* Journey Banner — 5-icon grid */
 .why-journey {
-  /* background: var(--bg-white); */
   margin-left: calc(-1 * var(--gutter));
   margin-right: calc(-1 * var(--gutter));
-  padding: clamp(52px, 6vw, 80px) var(--gutter);
-  margin-bottom: clamp(32px, 4vw, 52px);
 }
 .why-journey__icons {
   display: grid;
@@ -731,18 +694,24 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--space-20);
-  padding: 0 clamp(12px, 2vw, 28px);
+  padding: 48px 32px;
   text-align: center;
+  border-right: 1px solid var(--border-gray-1);
+  border-top: 1px solid var(--border-gray-1);
+  border-bottom: 1px solid var(--border-gray-1);
+  background-color: var(--bg-white);
+}
+.why-journey__icon-item:last-child {
+  border-right: none;
 }
 .why-journey__icon-wrap {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 72px;
-  height: 72px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
-  background: var(--gold-600);
+  background: var(--violet-600);
   color: var(--text-white);
   flex-shrink: 0;
   margin-bottom: var(--space-20);
@@ -754,131 +723,68 @@
 }
 .why-journey__icon-label {
   font-family: var(--font-sans);
-  font-size: var(--text-23);
-  font-weight: 700;
+  font-size: var(--text-19);
+  font-weight: 600;
   color: var(--text-gray-6);
-  letter-spacing: var(--tracking-tight);
+  letter-spacing: var(--tracking-tighter);
   line-height: 1.35;
   word-break: keep-all;
+  margin-bottom: 8px;
 }
-
-/* Services Accordion */
-/* why-acc: SERVICES 아코디언과 동일 구조, 색상만 gold-600 */
-.why-acc {
-  width: 100%;
-  max-width: 720px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-.why-acc__item {
-  background: var(--bg-gray);
-  transition: background 0.3s;
-}
-.why-acc__item.is-open {
-  background: var(--bg-white);
-}
-.why-acc__head {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-20);
-  padding: var(--space-24) 30px;
-  text-align: left;
+.why-journey__icon-sub {
   font-family: var(--font-sans);
-  font-size: 22px;
-  font-weight: 530;
-  color: var(--text-gray-6);
+  font-size: var(--text-16);
+  font-weight: 600;
+  color: var(--violet-600);
+  letter-spacing: var(--tracking-tighter);
+  margin-bottom: 16px;
+  margin-top: 36px;
+  word-break: keep-all;
+}
+.why-journey__icon-desc {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-gray-5);
+  line-height: 1.85;
   letter-spacing: var(--tracking-tight);
-  background: var(--bg-white);
-  transition:
-    background 0.3s,
-    color 0.3s;
-  cursor: pointer;
-}
-.why-acc__item.is-open .why-acc__head {
-  background: var(--gold-600);
-  color: var(--text-white);
-}
-.why-acc__icon {
-  position: relative;
-  width: 14px;
-  height: 14px;
-  flex: none;
-  color: var(--gold-500);
-}
-.why-acc__item.is-open .why-acc__icon {
-  color: var(--text-white);
-}
-.why-acc__icon::before,
-.why-acc__icon::after {
-  content: "";
-  position: absolute;
-  background: currentColor;
-  transition:
-    transform 0.35s ease,
-    opacity 0.35s ease;
-}
-.why-acc__icon::before {
-  left: 0;
-  top: 50%;
-  width: 100%;
-  height: 2.5px;
-  transform: translateY(-50%);
-}
-.why-acc__icon::after {
-  top: 0;
-  left: 50%;
-  height: 100%;
-  width: 2.5px;
-  transform: translateX(-50%);
-}
-.why-acc__item.is-open .why-acc__icon::after {
-  transform: translateX(-50%) scaleY(0);
-  opacity: 0;
-}
-.why-acc__body {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.45s cubic-bezier(0.2, 0.7, 0.2, 1);
-}
-.why-acc__body-inner {
-  padding: var(--space-32) 30px var(--space-40);
-  color: var(--text-gray-6);
-  font-size: var(--text-18);
-  letter-spacing: var(--tracking-tight);
-  line-height: 1.9;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
+  word-break: keep-all;
+  margin: 0;
 }
 .why-cta {
   text-align: center;
-  padding-top: clamp(36px, 4vw, 52px);
+  margin-top: 15px;
+}
+.why-cta .btn {
+  display: block;
+  width: 100%;
+  padding: 32px 32px;
+  height: auto;
+  font-size: var(--text-28);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  text-align: center;
+  border-radius: 0;
 }
 @media (max-width: 760px) {
   .why-journey__icons {
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: var(--space-40);
+    grid-template-columns: 1fr;
+    border-top: 1px solid var(--border-gray-1);
   }
-  .why-journey__icon-item {
-    border-right: none;
-    padding: 0;
-  }
-  .why-journey__icon-item:nth-child(odd) {
-    border-right: 1px solid var(--border-gray-1);
-    padding-right: clamp(12px, 4vw, 24px);
-  }
+  .why-journey__icon-item,
+  .why-journey__icon-item:nth-child(odd),
   .why-journey__icon-item:nth-child(even) {
-    padding-left: clamp(12px, 4vw, 24px);
+    border-top: none;
+    border-right: none;
+    border-bottom: 1px solid var(--border-gray-1);
+    padding: 44px 28px;
+  }
+  .why-journey__icon-item:last-child {
+    border-bottom: none;
   }
   .why-journey__icon-wrap {
-    width: 90px;
-    height: 90px;
+    width: 72px;
+    height: 72px;
   }
   .why-journey__icon-wrap svg {
     width: 38px;
@@ -1243,7 +1149,7 @@
   letter-spacing: 0.02em;
 }
 .treat-highlight {
-  color: var(--gold-600);
+  color: var(--violet-700);
 }
 .treat-grid {
   display: grid;
@@ -1402,9 +1308,17 @@
   .treat-card__body {
     padding: 16px 14px;
   }
-  .treat-cta .btn {
+  .treat-cta .btn,
+  .why-cta .btn,
+  .highlights__more .btn {
     padding: 14px 0;
     font-size: var(--text-15);
+  }
+  .highlights__more .btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    border-radius: 0;
   }
 }
 
@@ -1567,7 +1481,7 @@
     background: var(--accent-dark1);
     color: var(--text-white);
     font-family: var(--font-sans);
-    font-size: var(--text-14);
+    font-size: var(--text-16);
     font-weight: 800;
   }
   .hiw-card__step {
@@ -1593,7 +1507,7 @@
   #why.section,
   #highlights.section,
   #follow.section {
-    padding-top: 85px;
+    /* padding-top: 85px; */
   }
 
   /* Section head margin-bottom — consistent */
@@ -1861,8 +1775,7 @@
   .membership {
     grid-template-columns: 1fr;
   }
-  .booking__row,
-  .bk-dining-row {
+  .booking__row {
     grid-template-columns: 1fr 1fr;
   }
   .booking__submit {
@@ -1984,9 +1897,6 @@
     align-items: center;
     text-align: center;
   }
-  .hero__brand {
-    display: none;
-  }
   .hero__title {
     margin-top: 0;
     font-size: clamp(32px, 5.2vw, 32px);
@@ -2007,10 +1917,6 @@
     line-height: 1.6;
     max-width: 80%;
     text-align: center;
-  }
-  .hero__desc--strong {
-    font-weight: 400;
-    color: rgba(255, 255, 255, 0.88);
   }
   .hero__cta {
     display: none;
@@ -2356,8 +2262,7 @@
   .footer__mid {
     grid-template-columns: 1fr;
   }
-  .booking__row,
-  .bk-dining-row {
+  .booking__row {
     grid-template-columns: 1fr;
   }
   .bk-field {
