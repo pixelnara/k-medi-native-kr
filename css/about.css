@@ -5,8 +5,8 @@
    ============================================================ */
 
 .btn--primary {
-  background: var(--accent-dark1);
-  border-color: var(--accent-dark1);
+  background: var(--accent-blue2);
+  border-color: var(--accent-blue2);
 }
 .eyebrow--light {
   color: rgba(255, 255, 255, 0.42);

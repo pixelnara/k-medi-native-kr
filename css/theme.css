@@ -184,9 +184,9 @@
   --btn-secondary: var(--violet-600);    /* Secondary 버튼 호버 배경 (.btn--primary:hover) */
 
   /* ─── Semantic: Accent ─── */
-  --accent-mid: var(--violet-500);      /* UI 아이콘 · 체크마크 · 숫자 원 */
-  --accent-dark1: var(--violet-700);     /* 아코디언 배경 · 비교 제목 · 브랜드 버튼 */
-  --accent-dark2: var(--violet-800);    /* 딥 액센트 (compare col, footer bottom, btn2:hover) */
+  --accent-blue1: var(--violet-500);      /* UI 아이콘 · 체크마크 · 숫자 원 */
+  --accent-blue2: var(--violet-700);     /* 아코디언 배경 · 비교 제목 · 브랜드 버튼 */
+  --accent-blue3: var(--violet-800);    /* 딥 액센트 (compare col, footer bottom, btn2:hover) */
   --accent-gradient: linear-gradient(135deg, var(--violet-900) 0%, var(--violet-800) 35%, var(--violet-600) 70%, var(--violet-500) 100%); /* CTA dark 배경 */
 
   /* ─── Semantic: Social Login ─── */

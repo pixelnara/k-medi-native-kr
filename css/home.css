@@ -346,7 +346,7 @@
   flex-wrap: wrap;
   gap: 3px;
   margin-top: 15px;
-  background: var(--accent-mid);
+  background: var(--accent-blue1);
 }
 .stay-card__tags span {
   font-size: var(--text-12);
@@ -636,7 +636,7 @@
   transition: background 0.3s;
 }
 .feature__dots button.is-active {
-  background: var(--accent-mid);
+  background: var(--accent-blue1);
 }
 .feature__nav {
   display: flex;
@@ -675,7 +675,7 @@
   font-weight: 700;
 }
 .whyus__intro b.c-highlight {
-  color: var(--accent-dark1);
+  color: var(--accent-blue2);
 }
 
 /* Journey Banner — 5-icon grid */
@@ -949,7 +949,7 @@
 }
 .cta-dark .btn:hover {
   background: var(--bg-white);
-  color: var(--accent-dark1);
+  color: var(--accent-blue2);
 }
 
 /* ============================================================
@@ -1067,7 +1067,7 @@
     color 0.3s;
 }
 .acc-item.is-open .acc-head {
-  background: var(--accent-dark1);
+  background: var(--accent-blue2);
   color: var(--text-white);
 }
 .acc-icon {
@@ -1075,7 +1075,7 @@
   width: 14px;
   height: 14px;
   flex: none;
-  color: var(--accent-mid);
+  color: var(--accent-blue1);
 }
 .acc-icon::before,
 .acc-icon::after {
@@ -1406,7 +1406,7 @@
   width: 72px;
   height: 72px;
   border-radius: 50%;
-  background: var(--accent-dark1);
+  background: var(--accent-blue2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1498,7 +1498,7 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: var(--accent-dark1);
+    background: var(--accent-blue2);
     color: var(--text-white);
     font-family: var(--font-sans);
     font-size: var(--text-16);

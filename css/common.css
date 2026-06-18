@@ -142,7 +142,7 @@ body {
   border-color: transparent;
 }
 .btn--primary2 {
-  background: var(--accent-dark1);
+  background: var(--accent-blue2);
   color: var(--bg-white);
   border-color: transparent;
 }
@@ -154,7 +154,7 @@ body {
   color: var(--text-white);
 }
 .btn--primary2:hover {
-  background: var(--accent-dark2);
+  background: var(--accent-blue3);
 }
 
 /* ============================================================
@@ -905,7 +905,7 @@ image-slot#cert-sgi {
   padding-top: var(--space-24);
   border-top: 1px solid var(--border-gray-3);
   font-size: var(--text-12);
-  color: var(--accent-dark2);
+  color: var(--accent-blue3);
 }
 .footer__social {
   display: flex;
@@ -2375,7 +2375,7 @@ body:has(.gnb-overlay.is-open) {
   justify-content: space-between;
   margin: 24px 20px 32px;
   padding: 24px 20px;
-  background: var(--accent-dark1);
+  background: var(--accent-blue2);
   color: var(--text-white);
   text-decoration: none;
   border-radius: 4px;
