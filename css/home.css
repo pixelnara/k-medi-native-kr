@@ -714,7 +714,7 @@
 
 /* Journey Banner — 5-icon grid */
 .why-journey {
-  background: var(--surface-gray-3);
+  /* background: var(--bg-white); */
   margin-left: calc(-1 * var(--gutter));
   margin-right: calc(-1 * var(--gutter));
   padding: clamp(52px, 6vw, 80px) var(--gutter);
@@ -733,46 +733,33 @@
   align-items: center;
   gap: var(--space-20);
   padding: 0 clamp(12px, 2vw, 28px);
-  border-right: 1px solid var(--border-gray-1);
   text-align: center;
-}
-.why-journey__icon-item:first-child {
-  padding-left: 0;
-}
-.why-journey__icon-item:last-child {
-  border-right: none;
-  padding-right: 0;
 }
 .why-journey__icon-wrap {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 120px;
-  height: 120px;
+  width: 72px;
+  height: 72px;
   border-radius: 50%;
-  background: rgba(184, 149, 94, 0.12);
-  color: var(--gold-600);
+  background: var(--gold-600);
+  color: var(--text-white);
   flex-shrink: 0;
+  margin-bottom: var(--space-20);
 }
 .why-journey__icon-wrap svg {
-  width: 52px;
-  height: 52px;
+  width: 34px;
+  height: 34px;
+  display: block;
 }
 .why-journey__icon-label {
   font-family: var(--font-sans);
-  font-size: var(--text-15);
-  font-weight: 500;
+  font-size: var(--text-23);
+  font-weight: 700;
   color: var(--text-gray-6);
-  line-height: 1.45;
+  letter-spacing: var(--tracking-tight);
+  line-height: 1.35;
   word-break: keep-all;
-}
-.why-journey__icon-item::after {
-  content: "";
-  display: block;
-  width: 24px;
-  height: 2px;
-  background: var(--gold-500);
-  flex-shrink: 0;
 }
 
 /* Services Accordion */
@@ -806,7 +793,9 @@
   color: var(--text-gray-6);
   letter-spacing: var(--tracking-tight);
   background: var(--bg-white);
-  transition: background 0.3s, color 0.3s;
+  transition:
+    background 0.3s,
+    color 0.3s;
   cursor: pointer;
 }
 .why-acc__item.is-open .why-acc__head {
@@ -828,7 +817,9 @@
   content: "";
   position: absolute;
   background: currentColor;
-  transition: transform 0.35s ease, opacity 0.35s ease;
+  transition:
+    transform 0.35s ease,
+    opacity 0.35s ease;
 }
 .why-acc__icon::before {
   left: 0;
@@ -894,7 +885,6 @@
     height: 38px;
   }
 }
-
 
 /* ============================================================
    HIGHLIGHTS (news)
@@ -1099,7 +1089,6 @@
   transform: none;
 }
 
-
 /* ============================================================
    SERVICES (accordion)
    ============================================================ */
@@ -1232,7 +1221,6 @@
 .acc-detail-link:hover {
   opacity: 1;
 }
-
 
 /* ============================================================
    TREATMENTS (추천 서비스, 뷰티시술)
@@ -1419,7 +1407,6 @@
     font-size: var(--text-15);
   }
 }
-
 
 /* ============================================================
    HOW IT WORKS
@@ -1631,7 +1618,6 @@
     font-size: var(--text-13);
   }
 }
-
 
 @media (max-width: 860px) {
   :root {
@@ -2447,7 +2433,6 @@
     margin-bottom: var(--space-40);
   }
 }
-
 
 /* ============================================================
    RESPONSIVE — Home page specific
