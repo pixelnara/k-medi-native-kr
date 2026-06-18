@@ -85,8 +85,18 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
       </button>
     </div>
-        <!-- 1행: 서비스, 스페이스, 쇼핑, 소식 -->
+        <!-- 소개(모바일) · 서비스 · 쇼핑 · 스페이스 · 소식 · 소개(데스크탑) -->
     <div class="gnb-cols">
+      <div class="gnb-col gnb-col--mobile-only">
+        <h4 data-en="About">소개<svg class="gnb-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></h4>
+        <ul>
+          <li><a href="about.html" data-en="Who We Are">KMEDITOUR</a></li>
+          <li><a href="center.html" data-en="Hugro Center">휴그로센터</a></li>
+          <li><a href="#">서비스 이용방법</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">문의하기</a></li>
+        </ul>
+      </div>
       <div class="gnb-col">
         <h4 data-en="Our Services">서비스<svg class="gnb-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></h4>
         <ul>
@@ -133,6 +143,13 @@
         </ul>
       </div>
       <div class="gnb-col">
+        <h4 data-en="Space">스페이스<svg class="gnb-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></h4>
+        <ul>
+          <li><a href="#">피부분석 시스템 🌸</a></li>
+          <li><a href="center.html">휴그로센터</a></li>
+        </ul>
+      </div>
+      <div class="gnb-col">
         <h4 data-en="News">소식<svg class="gnb-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></h4>
         <ul>
           <li><a href="#" data-en="Event">이벤트</a></li>
@@ -140,42 +157,35 @@
           <li><a href="#" data-en="Korea Guide">코리아 가이드</a></li>
         </ul>
       </div>
-      <div class="gnb-col">
+      <div class="gnb-col gnb-col--about-desktop">
         <h4 data-en="About">소개<svg class="gnb-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></h4>
         <ul>
           <li><a href="about.html" data-en="Who We Are">KMEDITOUR</a></li>
-          <li><a href="#" data-en="Hugro Center">휴그로센터</a></li>
-        </ul>
-      </div>
-      <div class="gnb-col">
-        <h4 data-en="Information">안내<svg class="gnb-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></h4>
-        <ul>
-          <li><a href="index.html#how">서비스 이용 방법</a></li>
-          <li><a href="#" class="gnb-link--bold">FAQ</a></li>
-          <li><a href="#" class="gnb-link--bold" data-en="Contact">문의하기</a></li>
+          <li><a href="center.html" data-en="Hugro Center">휴그로센터</a></li>
+          <li><a href="#">서비스 이용방법</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">문의하기</a></li>
         </ul>
       </div>
     </div>
-    <!-- 2행: 마이페이지 -->
-    <div class="gnb-cols gnb-cols--sub">
-      <div class="gnb-col gnb-col--mypage">
-        <h4 data-en="My Page">마이페이지<svg class="gnb-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></h4>
-        <ul>
-          <li><a href="#">장바구니 확인</a></li>
-          <li><a href="#">예약확인</a></li>
-          <li><a href="#">문의내역</a></li>
-        </ul>
-      </div>
+    <div class="gnb-banners">
+      <a href="center.html" class="gnb-banner gnb-banner--hugro">
+        <div class="gnb-banner__inner">
+          <p class="gnb-banner__label">Premium Space</p>
+          <p class="gnb-banner__title">휴그로센터</p>
+          <p class="gnb-banner__sub">의료 뷰티 여행 토탈 케어 공간</p>
+        </div>
+        <svg class="gnb-banner__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+      <a href="#" class="gnb-banner gnb-banner--skin">
+        <div class="gnb-banner__inner">
+          <p class="gnb-banner__label">Skin Solution</p>
+          <p class="gnb-banner__title">퍼스널 스킨 솔루션</p>
+          <p class="gnb-banner__sub">나만의 피부 타입 맞춤 케어</p>
+        </div>
+        <svg class="gnb-banner__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
     </div>
-    </div>
-    <a href="#" class="gnb-banner">
-      <div class="gnb-banner__inner">
-        <p class="gnb-banner__label">Premium Space</p>
-        <p class="gnb-banner__title">휴그로센터</p>
-        <p class="gnb-banner__sub">의료 뷰티 여행 토탈 케어 공간</p>
-      </div>
-      <svg class="gnb-banner__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-    </a>
   </div>
 </div>
 
