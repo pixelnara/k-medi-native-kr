@@ -169,6 +169,9 @@
   position: relative;
   display: flex;
   align-items: center;
+  max-width: calc(var(--maxw-02) + 120px);
+  margin-left: auto;
+  margin-right: auto;
 }
 .pss-quiz-viewport {
   overflow: hidden;
@@ -232,7 +235,7 @@
 /* Category Card */
 .pss-category {
   background: var(--bg-white);
-  border: 2px dashed rgba(59, 51, 217, 0.28);
+  border: 1px solid var(--border-gray-1);
   border-radius: 4px;
   padding: clamp(28px, 4vw, 44px);
   margin-bottom: var(--space-8);
@@ -595,8 +598,8 @@
 /* ── AI Comment Card ── */
 .pss-ai-card {
   background: var(--surface-gray-1);
-  border: 2px solid var(--border-gray-1);
-  border-radius: 16px;
+  border: 1px solid var(--border-gray-1);
+  border-radius: 2px;
   padding: clamp(28px, 4vw, 40px);
   margin-bottom: clamp(40px, 6vw, 60px);
 }
@@ -684,8 +687,8 @@
 }
 .pss-ingredient-card {
   background: var(--bg-white);
-  border: 2px solid var(--border-gray-1);
-  border-radius: 12px;
+  border: 1px solid var(--border-gray-1);
+  border-radius: 2px;
   padding: var(--space-20) var(--space-20) var(--space-16);
 }
 .pss-ingredient-card__top {
@@ -761,7 +764,7 @@
 .pss-product-card__img {
   position: relative;
   background: var(--surface-gray-1);
-  border-radius: 12px;
+  border-radius: 2px;
   overflow: hidden;
   aspect-ratio: 1 / 1;
   margin-bottom: var(--space-14);
@@ -833,8 +836,8 @@
 /* ── CTA Card ── */
 .pss-cta {
   background: var(--surface-gray-1);
-  border: 2px solid var(--border-gray-1);
-  border-radius: 16px;
+  border: 1px solid var(--border-gray-1);
+  border-radius: 2px;
   padding: clamp(28px, 4vw, 40px);
 }
 .pss-cta__inner {
