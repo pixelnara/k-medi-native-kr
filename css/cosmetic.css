@@ -52,7 +52,7 @@
 /* ── Shop Section ── */
 .cosm-shop {
   padding: var(--space-40) 0 var(--space-80);
-  background: var(--bg-white);
+  background: var(--surface-gray-1);
 }
 
 /* ── Controls Bar ── */

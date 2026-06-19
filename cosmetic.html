@@ -457,17 +457,17 @@
 
   /* ── 상품 데이터 ── */
   var products = [
-    { id: 1,  name: '보닉스 레쥬티 리보 세럼',             category: '세럼',   price: 1100,   rating: 4.8, popularity: 95, tags: ['항산화', '깊은주름'], img: 'https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&w=600&q=70' },
-    { id: 2,  name: '보닉스 레쥬 리보 세럼',               category: '세럼',   price: 440000, rating: 4.7, popularity: 88, tags: ['건성케어', '피부결케어'], img: 'https://images.unsplash.com/photo-1570194065650-d99fb4bedf0a?auto=format&fit=crop&w=600&q=70' },
-    { id: 3,  name: '보닉스 헤어 리보 세럼',               category: '세럼',   price: 440000, rating: 4.6, popularity: 72, tags: ['두피진정', '두피영양'], img: 'https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=600&q=70' },
-    { id: 4,  name: '보닉스 휴그로 리코 크림',             category: '크림',   price: 220000, rating: 4.9, popularity: 91, tags: [], img: 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=600&q=70' },
-    { id: 5,  name: '보닉스 큐어 V',                       category: '스텝',   price: 220000, rating: 4.5, popularity: 65, tags: [], img: 'https://images.unsplash.com/photo-1612817288484-6f916006741a?auto=format&fit=crop&w=600&q=70' },
-    { id: 6,  name: '보닉스 큐어 C',                       category: '스텝',   price: 220000, rating: 4.7, popularity: 78, tags: ['각질케어', '흔적사제'], img: 'https://images.unsplash.com/photo-1620756236308-65c3ef5d25f3?auto=format&fit=crop&w=600&q=70' },
+    { id: 1,  name: '보닉스 레쥬티 리보 세럼',             category: '세럼',   price: 1100,   rating: 4.8, popularity: 95, tags: ['항산화', '깊은주름'], img: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=600&q=70' },
+    { id: 2,  name: '보닉스 레쥬 리보 세럼',               category: '세럼',   price: 440000, rating: 4.7, popularity: 88, tags: ['건성케어', '피부결케어'], img: 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=600&q=70' },
+    { id: 3,  name: '보닉스 헤어 리보 세럼',               category: '세럼',   price: 440000, rating: 4.6, popularity: 72, tags: ['두피진정', '두피영양'], img: 'https://images.unsplash.com/photo-1522338242992-e1a54906a8da?auto=format&fit=crop&w=600&q=70' },
+    { id: 4,  name: '보닉스 휴그로 리코 크림',             category: '크림',   price: 220000, rating: 4.9, popularity: 91, tags: [], img: 'https://images.unsplash.com/photo-1619994403073-2cec844b8e63?auto=format&fit=crop&w=600&q=70' },
+    { id: 5,  name: '보닉스 큐어 V',                       category: '스텝',   price: 220000, rating: 4.5, popularity: 65, tags: [], img: 'https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?auto=format&fit=crop&w=600&q=70' },
+    { id: 6,  name: '보닉스 큐어 C',                       category: '스텝',   price: 220000, rating: 4.7, popularity: 78, tags: ['각질케어', '흔적사제'], img: 'https://images.unsplash.com/photo-1556228841-a3c527ebefe5?auto=format&fit=crop&w=600&q=70' },
     { id: 7,  name: '보닉스 휴그로 펩타이드 미스트',       category: '미스트', price: 220000, rating: 4.4, popularity: 55, tags: ['수분공급'], img: 'https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&fit=crop&w=600&q=70' },
-    { id: 8,  name: '더:스트 고농축 휴그로 W 원료형 화장품 (30ea)', category: '화장품', price: 220000, rating: 4.3, popularity: 48, tags: ['단독션', '주름관리'], img: 'https://images.unsplash.com/photo-1556228841-a3c527ebefe5?auto=format&fit=crop&w=600&q=70' },
+    { id: 8,  name: '더:스트 고농축 휴그로 W 원료형 화장품 (30ea)', category: '화장품', price: 220000, rating: 4.3, popularity: 48, tags: ['단독션', '주름관리'], img: 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=600&q=70' },
     { id: 9,  name: '보닉스 스킨 에센스',                  category: '에센스', price: 180000, rating: 4.6, popularity: 82, tags: ['보습', '탄력'], img: 'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=600&q=70' },
-    { id: 10, name: '보닉스 셀 리페어 크림',               category: '크림',   price: 350000, rating: 4.8, popularity: 90, tags: ['재생', '진정'], img: 'https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=600&q=70' },
-    { id: 11, name: '휴그로 바이탈 에센스',                category: '에센스', price: 280000, rating: 4.5, popularity: 70, tags: ['활력', '광채'], img: 'https://images.unsplash.com/photo-1629732051884-df45cb4fe1e5?auto=format&fit=crop&w=600&q=70' },
+    { id: 10, name: '보닉스 셀 리페어 크림',               category: '크림',   price: 350000, rating: 4.8, popularity: 90, tags: ['재생', '진정'], img: 'https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&w=600&q=70' },
+    { id: 11, name: '휴그로 바이탈 에센스',                category: '에센스', price: 280000, rating: 4.5, popularity: 70, tags: ['활력', '광채'], img: 'https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=600&q=70' },
   ];
 
   var currentCategory = 'all';

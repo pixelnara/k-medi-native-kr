@@ -853,6 +853,7 @@ image-slot#cert-sgi {
   color: var(--text-gray-3);
   padding: var(--space-24) 0 var(--space-24);
   font-size: 13.5px;
+  border-top: 1px solid var(--border-gray-1);
 }
 .footer__top {
   display: flex;
