@@ -1,57 +1,16 @@
 /* ============================================================
    COSMETIC PAGE — cosmetic.css
+   Design tokens → theme.css :root
    ============================================================ */
 
-/* ── Header: 처음부터 solid 상태 고정 (스크롤 전 투명 상태 건너뜀) ── */
-.header {
-  background: var(--bg-white);
-  color: var(--text-gray-6);
-  box-shadow: 0 1px 0 var(--border-gray-1);
-}
-.header .brand {
-  color: var(--text-gray-7);
-}
-.header .header__util {
-  border-color: var(--border-gray-1);
-}
-.header .link-arrow {
-  color: var(--text-gray-6);
-}
-.header .link-arrow::after {
-  background: var(--text-gray-6);
-}
+/* header: header--light (common.css) */
+.gnb { display: none; }
 
 /* ── Hero ── */
-.cosm-hero {
-  padding: calc(var(--header-h) + 48px) 0 44px;
-  text-align: center;
-  border-bottom: 1px solid var(--border-gray-1);
-  background: var(--bg-white);
-}
-.cosm-hero .eyebrow {
-  font-size: var(--text-12);
-  font-weight: 700;
-  letter-spacing: var(--tracking-wider);
-  text-transform: uppercase;
-  color: var(--text-caption);
-  margin-bottom: var(--space-12);
-}
-.cosm-hero__title {
-  font-size: var(--text-34);
-  font-weight: 700;
-  color: var(--text-gray-6);
-  letter-spacing: var(--tracking-tight);
-  margin-bottom: var(--space-12);
-}
-.cosm-hero__sub {
-  font-size: var(--text-15);
-  color: var(--text-gray-3);
-  line-height: 1.6;
-}
 
 /* ── Shop Section ── */
 .cosm-shop {
-  padding: var(--space-40) 0 var(--space-80);
+  padding: var(--space-52) 0 var(--space-80);
   background: var(--surface-gray-1);
 }
 
@@ -60,13 +19,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: var(--space-32);
+  margin-bottom: var(--space-16);
   gap: var(--space-16);
+  max-width: 1230px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .cosm-controls__left {
   display: flex;
   align-items: center;
-  gap: var(--space-16);
+  gap: var(--space-8);
 }
 .cosm-controls__right {
   display: flex;
@@ -92,13 +54,15 @@
   gap: var(--space-6);
   padding: var(--space-8) var(--space-14);
   background: var(--bg-white);
-  border: 1.5px solid var(--border-gray-1);
-  border-radius: 6px;
+  border: 1px solid var(--border-gray-1);
+  border-radius: 0px;
   font-size: var(--text-14);
   font-weight: 600;
   color: var(--text-gray-6);
   cursor: pointer;
-  transition: border-color 0.15s, background 0.15s;
+  transition:
+    border-color 0.15s,
+    background 0.15s;
   white-space: nowrap;
 }
 .cosm-select-btn:hover {
@@ -110,8 +74,8 @@
   color: var(--text-caption);
 }
 .cosm-select-btn svg {
-  width: 14px;
-  height: 14px;
+  width: var(--text-14);
+  height: var(--text-14);
   transition: transform 0.2s;
   flex-shrink: 0;
 }
@@ -120,13 +84,13 @@
 }
 .cosm-select-dropdown {
   position: absolute;
-  top: calc(100% + 6px);
+  top: calc(100% + var(--space-6));
   left: 0;
   min-width: 140px;
   background: var(--bg-white);
   border: 1.5px solid var(--border-gray-1);
-  border-radius: 8px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  border-radius: var(--space-8);
+  box-shadow: 0 var(--space-8) 24px rgba(0, 0, 0, 0.1);
   z-index: 200;
   overflow: hidden;
   display: none;
@@ -158,18 +122,18 @@
   font-weight: 700;
 }
 .cosm-select-dropdown li.is-active::before {
-  content: '';
+  content: "";
   display: inline-block;
-  width: 6px;
-  height: 6px;
+  width: var(--space-6);
+  height: var(--space-6);
   border-radius: 50%;
   background: var(--text-caption);
   flex-shrink: 0;
 }
 .cosm-select-dropdown li:not(.is-active)::before {
-  content: '';
+  content: "";
   display: inline-block;
-  width: 6px;
+  width: var(--space-6);
   flex-shrink: 0;
 }
 
@@ -180,7 +144,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 6px;
+  border-radius: var(--space-6);
   color: var(--text-gray-4);
   border: 1.5px solid var(--border-gray-1);
   transition: all 0.15s;
@@ -191,18 +155,60 @@
   border-color: var(--border-gray-4);
 }
 .cosm-search-btn svg {
-  width: 16px;
-  height: 16px;
+  width: var(--text-16);
+  height: var(--text-16);
 }
 
 /* ── Product Grid ── */
 .cosm-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--space-24);
+  grid-template-columns: repeat(4, 285px);
+  column-gap: 30px;
+  row-gap: var(--space-56);
+  justify-content: center;
+}
+
+/* ── Pagination (모바일 전용 — 데스크탑에서는 숨김) ── */
+.cosm-pagination {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin-top: var(--space-56);
+}
+.cosm-pagi-btn {
+  width: 120px;
+  height: var(--space-48);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-gray-2);
+  background: var(--bg-white);
+  color: var(--text-gray-5);
+  cursor: pointer;
+  transition:
+    background 0.15s,
+    color 0.15s;
+  border-radius: 0;
+}
+.cosm-pagi-btn:hover:not(:disabled) {
+  background: var(--surface-gray-1);
+  color: var(--text-gray-7);
+}
+.cosm-pagi-btn:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+.cosm-pagi-label {
+  min-width: 100px;
+  text-align: center;
+  font-size: var(--text-17);
+  font-weight: 400;
+  color: var(--text-gray-5);
+  letter-spacing: var(--tracking-snug);
 }
 .cosm-grid:empty::after {
-  content: '상품이 없습니다.';
+  content: "상품이 없습니다.";
   display: block;
   grid-column: 1/-1;
   text-align: center;
@@ -211,129 +217,637 @@
   font-size: var(--text-15);
 }
 
-/* ── Product Card ── */
-.cosm-card {
-  display: flex;
-  flex-direction: column;
+/* ── Product Card (shared styles via .prod-card in common.css) ── */
+.cosm-grid .prod-card:hover {
+  background: var(--cosm-card-hover);
+  box-shadow: var(--cosm-card-hover-shadow);
+}
+
+/* 키워드 — 타이틀 위 텍스트 + 회색 언더바 */
+.cosm-card__keywords {
+  margin-bottom: var(--space-20);
+}
+.cosm-keyword {
+  display: inline-block;
+  font-size: var(--text-14);
+  font-weight: 700;
+  color: var(--text-gray-7);
+  line-height: 1.2;
+  letter-spacing: var(--tracking-tight);
+  padding-bottom: 3px;
+  border-bottom: 2px solid var(--text-gray-4);
+}
+.cosm-hbtn {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.75);
   cursor: pointer;
-}
-.cosm-card:hover .cosm-card__img {
-  transform: scale(1.04);
-}
-.cosm-card__img-wrap {
-  position: relative;
-  aspect-ratio: 3/4;
-  border-radius: 8px;
-  overflow: hidden;
-  background: var(--surface-gray-1);
-  margin-bottom: var(--space-12);
-}
-.cosm-card__img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.4s ease;
-}
-.cosm-card__tags {
-  position: absolute;
-  top: var(--space-10);
-  right: var(--space-10);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: var(--space-4);
-  max-width: 120px;
-}
-.cosm-tag {
-  width: 44px;
-  height: 44px;
-  border-radius: var(--radius-full);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 9.5px;
-  font-weight: 700;
-  color: var(--text-white);
-  text-align: center;
-  line-height: 1.2;
-  padding: 0 var(--space-3);
+  width: 48px;
+  height: 48px;
+  transition:
+    color 0.15s,
+    background 0.15s,
+    transform 0.1s;
+  border-radius: 2px;
 }
-/* 태그 색상 (6색 순환) */
-.cosm-tag--0 { background: var(--violet-500); }
-.cosm-tag--1 { background: var(--violet-800); }
-.cosm-tag--2 { background: var(--gray-800); }
-.cosm-tag--3 { background: var(--teal-500); }
-.cosm-tag--4 { background: #b0527a; }
-.cosm-tag--5 { background: var(--amber-500); }
+.cosm-hbtn:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.14);
+}
+.cosm-hbtn:active {
+  transform: scale(0.86);
+  background: rgba(255, 255, 255, 0.22);
+}
+/* 위시리스트: 토글 활성 */
+.cosm-hbtn.is-liked {
+  color: #ff6b8a;
+}
+.cosm-hbtn.is-liked svg {
+  fill: #ff6b8a;
+  stroke: #ff6b8a;
+}
+/* 장바구니: 추가 완료 플래시 */
+.cosm-hbtn.is-added {
+  color: #4ade80;
+  background: rgba(74, 222, 128, 0.18);
+}
+.cosm-hbtn.is-added svg {
+  stroke: #4ade80;
+}
+/* 공유: 복사 완료 플래시 */
+.cosm-hbtn.is-shared {
+  color: #60a5fa;
+  background: rgba(96, 165, 250, 0.18);
+}
+.cosm-hbtn.is-shared svg {
+  stroke: #60a5fa;
+}
+/* 이전/다음 화살표: 클릭 시 */
+.cosm-hbtn.is-nav-clicked {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.28);
+}
 
-.cosm-card__body {
-  padding: 0 var(--space-2);
+/* ── Card: Left-side label badges (flush to top-left corner) ── */
+.cosm-card__img-badges {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  z-index: 3;
 }
-.cosm-card__name {
-  font-size: var(--text-14);
-  font-weight: 600;
-  color: var(--text-gray-6);
-  line-height: 1.45;
-  margin-bottom: var(--space-6);
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+.cosm-badge {
+  display: inline-block;
+  padding: var(--space-5) var(--space-10);
+  border-radius: 0;
+  font-size: var(--text-11);
+  font-weight: 800;
+  line-height: 1.3;
+  white-space: nowrap;
+  letter-spacing: var(--tracking-snug);
 }
-.cosm-card__meta {
+.cosm-badge--buyers {
+  background: var(--cosm-badge-buyers-bg);
+  color: var(--text-white);
+}
+.cosm-badge--gift {
+  background: var(--cosm-badge-gift);
+  color: var(--text-white);
+}
+.cosm-badge--sale {
+  background: var(--cosm-navy);
+  color: var(--text-white);
+}
+
+/* ── Card: Image overlay (circle badge — 현재 미사용) ── */
+.cosm-card__img-badge {
+  position: absolute;
+  top: var(--space-10);
+  right: var(--space-10);
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: var(--cosm-navy);
+  color: var(--text-white);
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: var(--space-8);
+  justify-content: center;
+  font-size: 11.5px;
+  font-weight: 800;
+  text-align: center;
+  line-height: 1.3;
+  z-index: 2;
+  letter-spacing: var(--tracking-tighter);
+  pointer-events: none;
 }
-.cosm-card__price {
-  font-size: var(--text-15);
-  font-weight: 700;
-  color: var(--text-gray-7);
-}
-.cosm-card__rating {
-  font-size: var(--text-12);
-  color: var(--rating);
-  font-weight: 600;
+
+/* ── Card: Action buttons (장바구니·좋아요) ── */
+.cosm-card__cart-btn,
+.cosm-card__like-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-white);
+  padding: 0 var(--space-14);
+  cursor: pointer;
   display: flex;
+  align-items: center;
+  transition: background 0.15s;
+}
+.cosm-card__cart-btn:hover,
+.cosm-card__like-btn:hover {
+  background: var(--cosm-btn-on-dark-hover);
+}
+.cosm-card__cart-btn svg,
+.cosm-card__like-btn svg {
+  width: var(--space-20);
+  height: var(--space-20);
+  color: var(--text-white);
+}
+.cosm-card__like-btn.is-liked svg {
+  color: var(--cosm-like-active);
+  fill: var(--cosm-like-active);
+}
+
+/* ── Card: Delivery chip ── */
+.cosm-card__delivery {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  margin-bottom: var(--space-8);
+  font-size: var(--text-12);
+  color: var(--text-gray-3);
+}
+.cosm-chip {
+  display: inline-flex;
   align-items: center;
   gap: 3px;
+  padding: 2px 7px 3px;
+  border-radius: var(--space-4);
+  font-size: var(--text-11);
+  font-weight: 700;
+  white-space: nowrap;
+}
+.cosm-chip--dawn {
+  background: var(--cosm-navy);
+  color: var(--text-white);
+}
+.cosm-chip--day {
+  background: var(--cosm-chip-day-bg);
+  color: var(--text-white);
+}
+
+/* ── Card: Discount price ── */
+.cosm-card__price-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.cosm-card__price-orig {
+  font-size: var(--text-13);
+  color: var(--text-gray-2);
+  text-decoration: line-through;
+  font-weight: 400;
+}
+.cosm-card__price-row {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-5);
+}
+.cosm-card__discount {
+  font-size: var(--text-13);
+  font-weight: 800;
+  color: var(--cosm-discount);
+}
+
+/* ── Card: Points & Free shipping ── */
+.cosm-card__bottom {
+  margin-top: var(--space-16);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+.cosm-card__points {
+  font-size: var(--text-12);
+  color: var(--text-gray-3);
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+.cosm-card__points .chip-label {
+  background: var(--cosm-membership-bg);
+  color: var(--cosm-membership-text);
+  font-size: var(--text-11);
+  font-weight: 700;
+  padding: 1px var(--space-5);
+  border-radius: 3px;
+  white-space: nowrap;
+}
+.cosm-card__freeship {
+  font-size: var(--text-12);
+  color: var(--text-gray-2);
+}
+
+/* ── Card: Bottom action bar ── */
+.cosm-card__action-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 46px;
+  background: var(--cosm-action-bar-bg);
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.cosm-grid .prod-card:hover .cosm-card__action-bar {
+  opacity: 1;
+}
+.cosm-card__action-nav {
+  display: flex;
+  align-items: stretch;
+}
+.cosm-card__action-acts {
+  display: flex;
+  align-items: stretch;
+}
+.cosm-card__action-sep {
+  display: flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.25);
+  font-size: var(--text-18);
+  user-select: none;
+}
+.cosm-card__arrow {
+  background: transparent;
+  border: none;
+  color: var(--text-white);
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+.cosm-card__arrow:hover {
+  background: var(--cosm-btn-on-dark-hover);
+}
+.cosm-card__arrow svg {
+  width: var(--space-18);
+  height: var(--space-18);
+  color: var(--text-white);
+  display: block;
 }
 
 /* ── Responsive ── */
-@media (max-width: 1100px) {
+@media (max-width: 1300px) {
   .cosm-grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-20);
+    column-gap: 30px;
+  }
+}
+@media (max-width: 900px) {
+  .cosm-grid {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: var(--space-20);
+    row-gap: var(--space-48);
   }
 }
 @media (max-width: 860px) {
-  .cosm-hero {
-    padding: calc(var(--header-h) + 32px) 0 32px;
-  }
-  .cosm-hero__title {
-    font-size: clamp(24px, 5vw, 34px);
-  }
   .cosm-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-16);
+    column-gap: var(--space-16);
+    row-gap: var(--space-40);
+  }
+  .cosm-pagination {
+    display: flex;
   }
   .cosm-controls {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--space-12);
+    flex-wrap: wrap;
+    gap: var(--space-8);
   }
-  .cosm-controls__right {
-    align-self: flex-end;
+  .cosm-controls__left {
+    gap: var(--space-8);
+  }
+  .cosm-select-btn {
+    padding: var(--space-6) var(--space-10);
+    font-size: var(--text-13);
+  }
+  .cosm-count {
+    font-size: var(--text-13);
+    white-space: nowrap;
   }
   .cosm-shop {
-    padding-bottom: calc(var(--space-80) + env(safe-area-inset-bottom, 0px) + var(--space-16));
+    padding-bottom: calc(var(--space-40) + env(safe-area-inset-bottom, 0px) + var(--space-16));
   }
 }
 @media (max-width: 480px) {
-  .cosm-tag {
-    width: 38px;
-    height: 38px;
-    font-size: 8.5px;
+  .cosm-grid {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: var(--space-10);
+    row-gap: var(--space-24);
+  }
+  .cosm-card__keywords {
+    margin-bottom: var(--space-4);
+  }
+  .cosm-keyword {
+    font-size: var(--text-11);
+    font-weight: 500;
+    border-bottom-width: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+  }
+  .cosm-card__delivery,
+  .cosm-card__points {
+    font-size: var(--text-10);
+  }
+  .cosm-card__bottom {
+    margin-top: var(--space-8);
+  }
+  .cosm-card__img-badges .cosm-badge:nth-child(n + 2) {
+    display: none;
+  }
+  .cosm-badge {
+    font-size: var(--text-10);
+    padding: var(--space-4) 7px;
+  }
+}
+
+/* ══════════════════════════════════════════
+   PRODUCT DETAIL MODAL
+══════════════════════════════════════════ */
+.pd-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--overlay-bg);
+  z-index: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-20);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+.pd-overlay.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.pd-modal {
+  position: relative;
+  background: var(--bg-white);
+  border-radius: var(--space-16);
+  max-width: 960px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  transform: translateY(var(--space-20));
+  transition: transform 0.25s ease;
+}
+.pd-overlay.is-open .pd-modal {
+  transform: translateY(0);
+}
+.pd-close {
+  position: absolute;
+  top: var(--space-20);
+  right: var(--space-20);
+  width: var(--space-40);
+  height: var(--space-40);
+  border-radius: 50%;
+  background: var(--surface-gray-1);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: background 0.15s;
+}
+.pd-close:hover {
+  background: var(--border-gray-1);
+}
+
+.pd-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 500px;
+}
+.pd-gallery {
+  border-radius: var(--space-16) 0 0 var(--space-16);
+  overflow: hidden;
+  background: var(--surface-gray-1);
+}
+.pd-img-wrap {
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+.pd-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pd-info {
+  padding: var(--space-48) var(--space-40) var(--space-40);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  overflow-y: auto;
+}
+.pd-category {
+  font-size: var(--text-12);
+  font-weight: 700;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--text-caption);
+  margin-bottom: var(--space-10);
+  display: block;
+}
+.pd-name {
+  font-size: var(--text-24);
+  font-weight: 700;
+  color: var(--text-gray-7);
+  line-height: 1.35;
+  margin-bottom: var(--space-12);
+}
+.pd-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+  margin-bottom: var(--space-10);
+}
+.pd-tag {
+  font-size: var(--text-12);
+  font-weight: 700;
+  color: var(--text-gray-7);
+  padding-bottom: 3px;
+  border-bottom: 2px solid var(--text-gray-4);
+}
+.pd-rating {
+  font-size: var(--text-13);
+  color: var(--rating);
+  font-weight: 600;
+  margin-bottom: var(--space-16);
+}
+.pd-price {
+  font-size: var(--text-28);
+  font-weight: 800;
+  color: var(--text-gray-7);
+  margin-bottom: var(--space-12);
+  letter-spacing: var(--tracking-tighter);
+}
+.pd-desc {
+  font-size: var(--text-14);
+  color: var(--text-gray-3);
+  line-height: 1.65;
+  margin-bottom: var(--space-24);
+  border-top: 1px solid var(--border-gray-1);
+  padding-top: var(--space-16);
+}
+
+.pd-qty-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+  margin-bottom: var(--space-20);
+}
+.pd-qty-label {
+  font-size: var(--text-14);
+  font-weight: 600;
+  color: var(--text-gray-4);
+  min-width: 28px;
+}
+.pd-qty {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid var(--border-gray-1);
+  border-radius: var(--space-8);
+  overflow: hidden;
+}
+.pd-qty-btn {
+  width: var(--space-36);
+  height: var(--space-36);
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: var(--text-18);
+  color: var(--text-gray-4);
+  transition: background 0.12s;
+}
+.pd-qty-btn:hover {
+  background: var(--surface-gray-1);
+  color: var(--text-gray-7);
+}
+.pd-qty-val {
+  min-width: var(--space-36);
+  text-align: center;
+  font-size: var(--text-15);
+  font-weight: 700;
+  color: var(--text-gray-7);
+  border-left: 1.5px solid var(--border-gray-1);
+  border-right: 1.5px solid var(--border-gray-1);
+  padding: 0 var(--space-4);
+  line-height: var(--space-36);
+}
+
+.pd-actions {
+  display: flex;
+  gap: var(--space-10);
+  margin-bottom: var(--space-24);
+}
+.pd-btn {
+  flex: 1;
+  height: var(--space-48);
+  border-radius: var(--space-10);
+  font-size: var(--text-15);
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  transition: opacity 0.15s;
+}
+.pd-btn:hover {
+  opacity: 0.85;
+}
+.pd-btn--cart {
+  background: var(--surface-gray-1);
+  color: var(--text-gray-7);
+  border: 1.5px solid var(--border-gray-1);
+}
+.pd-btn--buy {
+  background: var(--cosm-navy);
+  color: var(--text-white);
+}
+
+/* 상품 정보 아코디언 */
+.pd-specs {
+  border-top: 1px solid var(--border-gray-1);
+}
+.pd-specs-toggle {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-16) 0;
+  background: none;
+  border: none;
+  font-size: var(--text-14);
+  font-weight: 700;
+  color: var(--text-gray-7);
+  cursor: pointer;
+}
+.pd-specs-toggle svg {
+  transition: transform 0.2s;
+}
+.pd-specs-toggle.is-open svg {
+  transform: rotate(180deg);
+}
+.pd-specs-table {
+  display: none;
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: var(--space-16);
+}
+.pd-specs-table.is-open {
+  display: table;
+}
+.pd-specs-table th,
+.pd-specs-table td {
+  padding: var(--space-10) 0;
+  font-size: var(--text-13);
+  border-bottom: 1px solid var(--border-gray-1);
+  text-align: left;
+  vertical-align: top;
+}
+.pd-specs-table th {
+  width: 80px;
+  color: var(--text-gray-3);
+  font-weight: 600;
+  padding-right: var(--space-12);
+}
+.pd-specs-table td {
+  color: var(--text-gray-7);
+}
+
+@media (max-width: 700px) {
+  .pd-layout {
+    grid-template-columns: 1fr;
+  }
+  .pd-gallery {
+    border-radius: var(--space-16) var(--space-16) 0 0;
+  }
+  .pd-info {
+    padding: var(--space-28) var(--space-24) var(--space-32);
   }
 }

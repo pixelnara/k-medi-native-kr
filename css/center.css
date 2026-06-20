@@ -4,6 +4,8 @@
    Breakpoints: 1080px · 860px · 600px
    ============================================================ */
 
+.gnb { display: none; }
+
 /* ─────────────────────────────────────────────────────
    HERO — full viewport height
    ───────────────────────────────────────────────────── */
@@ -12,7 +14,8 @@
   height: 95vh;
   overflow: hidden;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: center;
 }
 .center-hero__bg {
   position: absolute;
@@ -27,15 +30,16 @@
 .center-hero__overlay {
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(to right, rgba(0, 0, 0, 0.64) 0%, rgba(0, 0, 0, 0.08) 56%, transparent 100%),
-    linear-gradient(to top, rgba(0, 0, 0, 0.56) 0%, transparent 52%);
+  background: rgba(0, 0, 0, 0.42);
 }
 .center-hero__inner {
   position: relative;
   z-index: 1;
   padding: clamp(24px, 3.5vw, 48px) clamp(28px, 5vw, 72px);
   color: var(--text-white);
+  text-align: center;
+  max-width: 760px;
+  width: 100%;
 }
 .center-hero__category {
   font-size: var(--text-13);
@@ -51,11 +55,28 @@
   letter-spacing: -0.03em;
   color: var(--text-white);
   margin-bottom: 10px;
-  word-break: keep-all;
 }
 .center-hero__date {
   font-size: var(--text-13);
   color: rgba(255, 255, 255, 0.54);
+}
+.center-hero__preview-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 32px;
+  padding: 14px 36px;
+  border: 1.5px solid rgba(255, 255, 255, 0.72);
+  color: var(--text-white);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  transition: background 0.22s, border-color 0.22s;
+}
+.center-hero__preview-btn:hover {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: white;
 }
 
 /* ─────────────────────────────────────────────────────
@@ -86,7 +107,6 @@ figure.art-img--wide {
   font-size: clamp(15px, 1.4vw, 17px);
   line-height: 1.9;
   color: var(--text-gray-7);
-  word-break: keep-all;
   letter-spacing: var(--tracking-tight);
 }
 .art-intro p + p {
@@ -113,16 +133,14 @@ figure.art-img--wide {
   color: var(--text-gray-6);
   margin-bottom: 20px;
   line-height: 1.3;
-  word-break: keep-all;
 }
 .art-section__title--lg {
   font-size: clamp(24px, 3.2vw, 40px);
 }
 .art-section__body {
-  font-size: 18px;
+  font-size: var(--type-body-lg);
   line-height: 1.9;
   color: var(--text-gray-7);
-  word-break: keep-all;
   letter-spacing: -0.01em;
 }
 .art-section__body + .art-section__body {
@@ -178,7 +196,6 @@ figure.art-img--center img {
   font-size: clamp(13px, 1.2vw, 15px);
   line-height: 1.75;
   color: var(--text-gray-7);
-  word-break: keep-all;
   letter-spacing: var(--tracking-normal);
 }
 
@@ -302,7 +319,6 @@ figure.art-img--center img {
   font-size: var(--text-16);
   color: var(--text-gray-3);
   line-height: 1.7;
-  word-break: keep-all;
   flex: 1;
 }
 
@@ -347,7 +363,6 @@ figure.art-img--center img {
   font-size: var(--text-18);
   color: var(--text-gray-3);
   line-height: 1.65;
-  word-break: keep-all;
   flex: 1;
 }
 .info-dd a {
@@ -416,18 +431,16 @@ figure.art-img--center img {
   margin-bottom: 10px;
 }
 .floors-grid__title {
-  font-size: 20px;
+  font-size: var(--type-h5);
   font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--text-gray-6);
   margin-bottom: 12px;
-  word-break: keep-all;
 }
 .floors-grid__body {
-  font-size: 18px;
+  font-size: var(--type-body-lg);
   line-height: 1.85;
   color: var(--text-gray-5);
-  word-break: keep-all;
 }
 
 /* ─────────────────────────────────────────────────────
@@ -556,7 +569,6 @@ figure.art-img--center img {
   font-size: clamp(14px, 1.3vw, 16px);
   line-height: 1.85;
   color: var(--text-gray-5, #555);
-  word-break: keep-all;
   max-width: 640px;
 }
 
@@ -597,7 +609,6 @@ figure.art-img--center img {
   color: var(--text-gray-6);
   margin-bottom: 14px;
   line-height: 1.1;
-  word-break: keep-all;
 }
 .location-meta {
   display: flex;
@@ -672,49 +683,7 @@ figure.art-img--center img {
   padding-bottom: clamp(40px, 6vw, 72px);
 }
 
-/* ─────────────────────────────────────────────────────
-   CTA BANNER — dark full-width
-   ───────────────────────────────────────────────────── */
-.cta-banner {
-  background: var(--bg-dark);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 24px;
-  padding: clamp(36px, 4.5vw, 56px) clamp(28px, 6vw, 96px);
-}
-.cta-banner__label {
-  font-size: var(--text-12);
-  color: rgba(255, 255, 255, 0.38);
-  letter-spacing: 0.06em;
-  margin-bottom: 6px;
-}
-.cta-banner__title {
-  font-size: clamp(16px, 1.9vw, 22px);
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.9);
-  letter-spacing: -0.01em;
-  word-break: keep-all;
-}
-.cta-banner__btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: var(--bg-white);
-  color: var(--bg-dark);
-  padding: 14px 28px;
-  font-size: var(--text-14);
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  text-decoration: none;
-  white-space: nowrap;
-  border-radius: 2px;
-  flex-shrink: 0;
-  transition: background 0.2s;
-}
-.cta-banner__btn:hover {
-  background: rgba(255, 255, 255, 0.88);
-}
+/* cta-banner → common.css 로 이동 */
 
 /* ─────────────────────────────────────────────────────
    APP BANNER — vivid blue promotional strip
@@ -737,7 +706,6 @@ figure.art-img--center img {
   font-weight: 600;
   color: #fff;
   letter-spacing: -0.01em;
-  word-break: keep-all;
 }
 .app-banner__btns {
   display: flex;
@@ -816,12 +784,11 @@ figure.art-img--center img {
   transform: scale(1.04);
 }
 .rpost-card__title {
-  font-size: 19px;
+  font-size: var(--type-h5);
   font-weight: 700;
   color: var(--text-gray-6);
   line-height: 1.4;
   margin-bottom: 6px;
-  word-break: keep-all;
 }
 .rpost-card__sub {
   font-size: var(--text-17);
@@ -856,15 +823,6 @@ figure.art-img--center img {
   }
   .location-map iframe {
     height: clamp(260px, 60vw, 380px);
-  }
-  .cta-banner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
-  }
-  .cta-banner__btn {
-    width: 100%;
-    justify-content: center;
   }
   .app-banner__qr {
     display: none;

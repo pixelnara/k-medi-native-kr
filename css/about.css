@@ -4,74 +4,19 @@
    Breakpoints: 1080px · 860px · 600px
    ============================================================ */
 
-.btn--primary {
-  background: var(--accent-blue2);
-  border-color: var(--accent-blue2);
-}
+/* header: header--solid (common.css) */
+.gnb { display: none; }
+
 .eyebrow--light {
   color: rgba(255, 255, 255, 0.42);
-}
-
-/* ─────────────────────────────────────────────────────
-   ABOUT HERO
-   ───────────────────────────────────────────────────── */
-.about-hero {
-  position: relative;
-  height: 95vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  color: var(--text-white);
-  text-align: center;
-}
-.about-hero__bg {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  transition: transform 12s ease;
-}
-.about-hero:hover .about-hero__bg {
-  transform: scale(1.04);
-}
-.about-hero__overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.76);
-  z-index: 1;
-}
-.about-hero__inner {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  max-width: 1200px;
-  padding: calc(var(--header-h) + clamp(32px, 4vw, 64px)) var(--gutter) clamp(40px, 5vw, 72px);
-  margin-top: clamp(40px, 8vh, 100px);
-}
-.about-hero__title {
-  font-family: var(--font-sans);
-  font-size: clamp(38px, 5.2vw, 88px);
-  font-weight: 550;
-  line-height: 1.18;
-  letter-spacing: var(--tracking-tighter);
-  color: rgba(255, 255, 255, 0.88);
-  margin-bottom: var(--space-28);
-  word-break: keep-all;
-}
-.about-hero__sub {
-  font-size: var(--text-16);
-  color: rgba(255, 255, 255, 0.48);
-  letter-spacing: var(--tracking-wide);
-  text-transform: uppercase;
-  font-weight: 600;
 }
 
 /* ─────────────────────────────────────────────────────
    INTRO — WHO WE ARE
    ───────────────────────────────────────────────────── */
 .intro {
-  padding: clamp(88px, 12vw, 156px) 0;
+  padding-top: clamp(120px, 16vw, 200px);
+  padding-bottom: clamp(48px, 6vw, 80px);
   background: var(--bg-white);
 }
 .intro__header {
@@ -95,12 +40,12 @@
    STEPS — HOW IT WORKS
    ───────────────────────────────────────────────────── */
 .steps {
-  padding: clamp(88px, 12vw, 156px) 0;
+  padding: clamp(56px, 7vw, 96px) 0 clamp(48px, 6vw, 80px);
   background: var(--surface-gray-1);
 }
 .steps__head {
   text-align: center;
-  margin-bottom: clamp(56px, 8vw, 96px);
+  margin-bottom: clamp(36px, 5vw, 60px);
 }
 .steps__list {
   display: grid;
@@ -137,18 +82,13 @@
    ───────────────────────────────────────────────────── */
 .guarantee {
   background: var(--bg-dark);
-  padding: clamp(88px, 12vw, 160px) 0;
+  padding: clamp(56px, 7vw, 96px) 0 clamp(88px, 12vw, 160px);
 }
 .guarantee__header {
-  margin-bottom: clamp(64px, 9vw, 108px);
+  margin-bottom: clamp(36px, 5vw, 60px);
 }
-.guarantee__title {
-  font-family: var(--font-sans);
-  font-size: clamp(28px, 3.4vw, 54px);
-  font-weight: 700;
+.guarantee .display {
   color: var(--text-white);
-  line-height: 1.2;
-  letter-spacing: var(--tracking-tight);
   margin-top: var(--space-20);
 }
 .guarantee__cols {
@@ -192,18 +132,12 @@
    TESTIMONIALS — Customer Reviews
    ───────────────────────────────────────────────────── */
 .testimonials {
-  padding: clamp(88px, 12vw, 156px) 0;
+  padding: clamp(56px, 7vw, 96px) 0 clamp(48px, 6vw, 80px);
   background: var(--bg-white);
 }
 .testimonials__head {
   text-align: center;
-  margin-bottom: clamp(56px, 8vw, 96px);
-}
-.testimonials__sub {
-  font-size: var(--text-17);
-  color: var(--text-gray-3);
-  line-height: 1.72;
-  margin-top: var(--space-16);
+  margin-bottom: clamp(36px, 5vw, 60px);
 }
 .testimonials__grid {
   display: grid;
@@ -338,8 +272,17 @@
    RESPONSIVE — Mobile (≤ 860px)
    ───────────────────────────────────────────────────── */
 @media (max-width: 860px) {
+  .about-hero {
+    height: auto;
+    min-height: 50vh;
+  }
+  .about-hero__inner {
+    margin-top: 0;
+    padding-bottom: clamp(32px, 6vw, 44px);
+  }
   .about-hero__title {
-    font-size: clamp(32px, 8.5vw, 48px);
+    font-size: clamp(24px, 7vw, 48px);
+    line-height: 1.4;
   }
 
   .intro__cols {

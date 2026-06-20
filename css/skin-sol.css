@@ -1,34 +1,8 @@
-/* skin-sol.css — 나의 피부 타입 찾기
+/* skin-sol.css — 나의 피부 솔루션 찾기
    Load order: reset.css → theme.css → common.css → skin-sol.css */
 
-/* ============================================================
-   HERO
-   ============================================================ */
-.pss-hero {
-  padding: clamp(120px, 14vw, 180px) 0 clamp(52px, 6vw, 72px);
-  background: var(--gray-950);
-  text-align: center;
-}
-.pss-hero__title {
-  margin: 0 auto var(--space-20);
-  font-size: var(--text-46);
-  font-weight: 600;
-  letter-spacing: var(--tracking-tight);
-  color: var(--text-white);
-}
-.pss-hero__desc {
-  margin: 0 auto var(--space-28);
-  max-width: 54ch;
-  color: rgba(255, 255, 255, 0.65);
-  font-size: var(--text-16);
-  line-height: 1.85;
-  text-align: center;
-}
-/* Hero eyebrow override (dark bg) */
-.pss-hero__eyebrow {
-  color: var(--violet-300);
-  margin-bottom: var(--space-16);
-}
+/* header: header--light (common.css) */
+.gnb { display: none; }
 
 /* ── SOL-NAV (회색 배경: 퀴즈와 동일) ── */
 .pss-sol-nav {
@@ -38,6 +12,7 @@
 }
 
 /* ── 솔루션 탭 ── */
+/* tab.css에서 .tab-pill__btn 공통 스타일 제공 */
 .pss-sol-tabs {
   display: inline-flex;
   gap: var(--space-6);
@@ -47,28 +22,18 @@
   padding: 5px;
   margin-bottom: var(--space-16);
 }
-.pss-sol-tab {
-  display: inline-flex;
-  align-items: center;
+.pss-sol-tabs .tab-pill__btn {
   gap: 7px;
   padding: 9px 22px;
-  border-radius: var(--radius-pill);
   font-size: var(--text-14);
   font-weight: 600;
   letter-spacing: 0.01em;
-  cursor: pointer;
-  border: none;
-  background: transparent;
   color: var(--text-gray-3);
-  transition:
-    background 0.22s,
-    color 0.22s;
 }
-.pss-sol-tab.is-active {
+.pss-sol-tabs .tab-pill__btn.is-active {
   background: var(--gray-950);
-  color: var(--text-white);
 }
-.pss-sol-tab:not(.is-active):hover {
+.pss-sol-tabs .tab-pill__btn:not(.is-active):hover {
   color: var(--text-gray-6);
 }
 
@@ -201,7 +166,10 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: border-color 0.2s, color 0.2s, background 0.2s;
+  transition:
+    border-color 0.2s,
+    color 0.2s,
+    background 0.2s;
   padding: 0;
   margin: 0 var(--space-6);
 }
@@ -334,7 +302,7 @@
   padding: var(--space-24) var(--space-24) var(--space-20);
   border: 1px solid var(--border-gray-1);
   border-radius: 2px;
-  background: var(--surface-white);
+  background: var(--bg-white);
   position: relative;
   transition:
     border-color 0.25s ease,
@@ -667,6 +635,7 @@
 .pss-section-title {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: var(--space-10);
   font-size: var(--text-20);
   font-weight: 700;
@@ -674,10 +643,27 @@
   letter-spacing: var(--tracking-tight);
   margin-bottom: var(--space-24);
 }
+.pss-section-title__left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-10);
+}
 .pss-section-title svg {
   width: 20px;
   height: 20px;
   color: var(--accent-blue1);
+}
+.pss-section-title__link {
+  font-size: var(--text-13);
+  font-weight: 600;
+  color: var(--accent-blue2);
+  letter-spacing: 0;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+}
+.pss-section-title__link:hover {
+  opacity: 0.7;
 }
 .pss-ingredients-grid {
   display: grid;
@@ -754,83 +740,6 @@
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-24);
   margin-bottom: clamp(40px, 6vw, 60px);
-}
-.pss-product-card {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer;
-}
-.pss-product-card__img {
-  position: relative;
-  background: var(--surface-gray-1);
-  border-radius: 2px;
-  overflow: hidden;
-  aspect-ratio: 1 / 1;
-  margin-bottom: var(--space-14);
-}
-.pss-product-card__img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-.pss-product-card:hover .pss-product-card__img img {
-  transform: scale(1.04);
-}
-.pss-product-card__img-placeholder {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, var(--gray-50), var(--gray-150));
-  color: var(--gray-300);
-}
-.pss-product-card__img-placeholder svg {
-  width: 40px;
-  height: 40px;
-}
-.pss-product-tags {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  align-items: flex-end;
-}
-.pss-product-tag {
-  display: inline-block;
-  padding: 3px 8px;
-  border-radius: var(--radius-pill);
-  background: var(--gray-900);
-  color: var(--text-white);
-  font-size: var(--text-10);
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  white-space: nowrap;
-}
-.pss-product-tag--dark {
-  background: var(--gray-950);
-  color: var(--text-white);
-}
-.pss-product-tag--blue {
-  background: var(--violet-100);
-  color: var(--violet-600);
-}
-.pss-product-card__name {
-  font-size: var(--text-14);
-  font-weight: 600;
-  color: var(--text-gray-5);
-  margin-bottom: var(--space-6);
-  line-height: 1.4;
-}
-.pss-product-card__price {
-  font-size: var(--text-16);
-  font-weight: 700;
-  color: var(--text-caption);
-  letter-spacing: var(--tracking-tight);
 }
 
 /* ── CTA Card ── */
@@ -916,17 +825,6 @@
    RESPONSIVE
    ============================================================ */
 @media (max-width: 860px) {
-  .pss-hero {
-    padding-top: calc(var(--header-h) + 40px);
-    padding-bottom: 48px;
-  }
-  .pss-hero__title {
-    font-size: clamp(30px, 7vw, 42px);
-  }
-  .pss-hero__desc {
-    font-size: var(--text-15);
-    margin-bottom: var(--space-36);
-  }
   .pss-steps {
     gap: 0;
   }
