@@ -22,13 +22,13 @@
 <link rel="stylesheet" href="css/reset.css" />
 <link rel="stylesheet" href="css/font.css" />
 <link rel="stylesheet" href="css/theme.css" />
-<link rel="stylesheet" href="css/common.css" />
   <link rel="stylesheet" href="css/components/button.css" />
   <link rel="stylesheet" href="css/components/accordion.css" />
   <link rel="stylesheet" href="css/components/modal.css" />
   <link rel="stylesheet" href="css/components/card.css" />
   <link rel="stylesheet" href="css/components/tab.css" />
   <link rel="stylesheet" href="css/components/breadcrumb.css" />
+<link rel="stylesheet" href="css/common.css" />
 <link rel="stylesheet" href="css/center.css" />
 </head>
 <body>
@@ -560,6 +560,7 @@
           allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
+          tabindex="-1"
         ></iframe>
         <a
           href="https://www.google.com/maps?q=37.5228428,127.0230945"
@@ -602,7 +603,7 @@
     <div class="app-banner__text">
       <p class="app-banner__title">여기에서 간편하게 예약하세요</p>
     </div>
-    <div class="app-banner__qr" aria-label="QR 코드">
+    <div class="app-banner__qr" role="img" aria-label="QR 코드">
       <svg viewBox="0 0 100 100" width="84" height="84" xmlns="http://www.w3.org/2000/svg">
         <rect x="2" y="2" width="38" height="38" fill="none" stroke="white" stroke-width="4"/>
         <rect x="10" y="10" width="22" height="22" fill="white"/>
@@ -916,8 +917,8 @@
   const modal   = document.getElementById('loginModal');
   const close   = document.getElementById('loginClose');
   const backdrop= document.getElementById('loginBackdrop');
-  function openModal(){ modal.classList.add('is-open'); modal.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; }
-  function closeModal(){ modal.classList.remove('is-open'); modal.setAttribute('aria-hidden','true'); document.body.style.overflow=''; }
+  function openModal(){ modal.classList.add('is-open'); modal.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; var first=modal.querySelector('input:not([type=hidden]),button:not([disabled])'); if(first) setTimeout(function(){first.focus();},50); }
+  function closeModal(){ modal.classList.remove('is-open'); modal.setAttribute('aria-hidden','true'); document.body.style.overflow=''; if(trigger) trigger.focus(); }
   if (trigger) trigger.addEventListener('click', function(e){ e.preventDefault(); openModal(); });
   const gnbLoginBtn = document.querySelector('.gnb-login-btn');
   if (gnbLoginBtn) gnbLoginBtn.addEventListener('click', function(e){ e.preventDefault(); openModal(); });

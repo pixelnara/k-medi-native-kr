@@ -8,9 +8,8 @@
 :root {
   --edi-ink: #111111; /* 제목·아이콘 잉크 */
   --edi-line: var(--gray-950); /* 다크 헤어라인 보더 */
-  --edi-blue: var(--gray-950); /* 액센트 → 그레이(색상 최소화) */
-  --edi-blue-d: var(--gray-800); /* 호버 */
-  --edi-green: var(--gray-950); /* 액센트2 → 그레이 */
+  --edi-blue: var(--blue-500); /* 액센트 블루 */
+  --edi-blue-d: var(--blue-600); /* 액센트 블루 다크 (호버) */
 
   /* 시맨틱 토큰 재매핑 */
   --accent-gray-1: var(--edi-blue); /* 아이콘·체크·숫자원·액티브·보더강조 */
@@ -948,22 +947,33 @@
     grid-template-columns: 1fr;
     gap: var(--space-12);
   }
-  /* Issue 5-1: 가로 row 레이아웃에서 체크 아이콘을 수직 가운데 정렬 */
-  .pss-option__check {
-    top: 50%;
-    transform: translateY(-50%);
-  }
+  /* 가로 row 레이아웃 — 체크 터치 영역 확보 + 텍스트 겹침 방지 */
   .pss-option__card {
     flex-direction: row;
     align-items: center;
     min-height: auto;
-    padding: var(--space-18) var(--space-18);
+    /* right 56px: check(32) + right-offset(14) + gap(10) */
+    padding: var(--space-18) 56px var(--space-18) var(--space-18);
     gap: var(--space-16);
+  }
+  .pss-option__check {
+    top: 50%;
+    right: 13px;
+    width: 32px;
+    height: 32px;
+    transform: translateY(-50%);
+  }
+  .pss-option__check svg {
+    width: 16px;
+    height: 16px;
   }
   .pss-option__icon {
     width: 40px;
     height: 40px;
     flex-shrink: 0;
+  }
+  .pss-option__name {
+    font-size: var(--text-15);
   }
   .pss-option__text {
     font-size: var(--text-13);
@@ -1139,13 +1149,13 @@
 /* magazine City Guides 스타일: gap 없이 카드 사이 얇은 선 구분 */
 .pss-rec-strip {
   display: flex;
-  /* 카드 사이 세로 구분선이 들어갈 간격 */
   gap: 33px;
   overflow-x: auto;
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  padding-left: var(--gutter);
 }
 .pss-rec-strip::-webkit-scrollbar {
   display: none;

@@ -36,7 +36,7 @@ body {
   padding: clamp(64px, 9vw, 132px) 0;
 }
 .section--surface {
-  background: var(--surface-gray-1);
+  background: var(--surface-gray-3);
 }
 /* Eyebrow / section label — the ONLY place --caption is used */
 .eyebrow {
@@ -150,7 +150,7 @@ body {
   color: var(--text-gray-6);
 }
 .page-hero--navy .page-hero__title {
-  color: #fff;
+  color: var(--text-white);
 }
 .page-hero__sub {
   font-size: var(--text-15);
@@ -371,14 +371,14 @@ body {
 }
 .util-dropdown__menu a:hover {
   background: var(--gray-950);
-  color: #fff !important;
+  color: var(--text-white) !important;
   text-decoration: none !important;
 }
 .util-menu-utility {
-  color: var(--amber-500) !important;
+  color: var(--blue-400) !important;
 }
 .util-menu-utility:hover {
-  color: var(--amber-300) !important;
+  color: var(--blue-300) !important;
 }
 .util-user-circle {
   display: inline-flex;
@@ -472,7 +472,7 @@ body {
 }
 .lang-option:hover {
   background: var(--gray-950);
-  color: #fff;
+  color: var(--text-white);
 }
 .lang-option.is-active {
   font-weight: 800;
@@ -760,7 +760,7 @@ image-slot#cert-sgi {
    ============================================================ */
 /* 블랙 에디토리얼 푸터 (magazine 무드) */
 .footer {
-  background: #111111;
+  background: var(--bg-dark);
   color: rgba(255, 255, 255, 0.6);
   padding: clamp(40px, 5vw, 64px) 0 var(--space-32);
   font-size: 13.5px;
@@ -790,7 +790,7 @@ image-slot#cert-sgi {
   text-decoration: none;
 }
 .footer__top a:hover {
-  color: #fff;
+  color: var(--text-white);
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: 3px;
@@ -810,7 +810,7 @@ image-slot#cert-sgi {
 .footer__brand {
   font-family: var(--font-sans);
   font-size: var(--text-32);
-  color: #fff;
+  color: var(--text-white);
   font-weight: 600;
   letter-spacing: var(--tracking-normal);
 }
@@ -830,7 +830,7 @@ image-slot#cert-sgi {
   gap: var(--space-8) 24px;
 }
 .footer dt {
-  color: #fff;
+  color: var(--text-white);
   font-weight: 600;
 }
 .footer dd {
@@ -862,9 +862,9 @@ image-slot#cert-sgi {
   transition: 0.3s;
 }
 .footer__social a:hover {
-  background: #fff;
-  color: #111;
-  border-color: #fff;
+  background: var(--bg-white);
+  color: var(--text-gray-7);
+  border-color: var(--text-white);
 }
 .footer__social svg {
   width: 17px;
@@ -898,7 +898,7 @@ image-slot#cert-sgi {
   height: 20px;
 }
 .footer__top-btn:hover {
-  color: #fff;
+  color: var(--text-white);
 }
 
 /* ============================================================
@@ -936,27 +936,35 @@ image-slot#cert-sgi {
 .foot-contact__input {
   flex: 1;
   min-width: 0;
-  height: 56px;
+  /* height: 56px; */
   padding: 0 var(--space-18);
   border: 1px solid var(--gray-950);
-  border-right: none;
-  background: #fff;
-  font-size: var(--text-15);
+  border-right: 0;
+  background: var(--bg-white);
+  font-size: 16px;
   color: var(--text-gray-7);
   font-family: inherit;
+  box-shadow: none;
 }
+
+.foot-contact__input:focus {
+  outline: none;
+  box-shadow: none;
+  border: 2px solid var(--blue-500);
+}
+.foot-contact__input:focus-visible {
+  outline: 2px solid var(--blue-500);
+  outline-offset: -2px;
+  box-shadow: none;
+  border: 2px solid var(--blue-500);
+}
+
 .foot-contact__input::placeholder {
   color: var(--text-gray-2);
 }
-.foot-contact__input:focus {
-  outline: none;
-  border-color: var(--blue-500);
-  box-shadow: inset 0 0 0 1px var(--blue-500);
-}
 .foot-contact__btn {
-  height: 56px;
   border-radius: 0;
-  border: none;
+  border: 1px solid var(--gray-950);
   padding: 0 var(--space-32);
   white-space: nowrap;
 }
@@ -979,7 +987,7 @@ image-slot#cert-sgi {
   height: var(--space-56);
   border-radius: var(--radius-full);
   background: var(--gray-900);
-  color: #fff;
+  color: var(--text-white);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1249,7 +1257,7 @@ image-slot#cert-sgi {
   }
   .gnb-cta-btn--book {
     background: var(--gray-950);
-    color: #fff !important;
+    color: var(--text-white) !important;
   }
   .gnb-cta-btn--book:hover {
     background: var(--blue-500);
@@ -1261,7 +1269,7 @@ image-slot#cert-sgi {
   }
   .gnb-cta-btn--tel:hover {
     background: rgba(255, 255, 255, 0.18);
-    color: #fff !important;
+    color: var(--text-white) !important;
   }
   .gnb-cta-btn svg {
     width: 14px;
@@ -1318,18 +1326,11 @@ image-slot#cert-sgi {
   transition: transform 0.6s cubic-bezier(0.7, 0, 0.2, 1);
   overflow-y: auto;
   overflow-x: hidden;
-  scrollbar-gutter: stable;
 }
 .gnb-overlay.is-open {
   transform: none;
 }
-html:has(.gnb-overlay.is-open) {
-  overflow: hidden;
-  scrollbar-gutter: auto;
-}
-body:has(.gnb-overlay.is-open) {
-  overflow: hidden;
-}
+/* GNB open: overflow managed via JS (document.body.style.overflow) */
 
 /* Dark theme variant — desktop only (861px+) */
 @media (min-width: 861px) {
@@ -1577,7 +1578,7 @@ body:has(.gnb-overlay.is-open) {
 }
 .gnb-col a[href]:not([href="#"]):hover {
   text-decoration: underline;
-  text-decoration-color: #ffffff;
+  text-decoration-color: var(--text-white);
   text-decoration-thickness: 2px;
   text-underline-offset: 3px;
 }

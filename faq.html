@@ -8,13 +8,13 @@
 <link rel="stylesheet" href="css/reset.css" />
 <link rel="stylesheet" href="css/font.css" />
 <link rel="stylesheet" href="css/theme.css" />
-<link rel="stylesheet" href="css/common.css" />
   <link rel="stylesheet" href="css/components/button.css" />
   <link rel="stylesheet" href="css/components/accordion.css" />
   <link rel="stylesheet" href="css/components/modal.css" />
   <link rel="stylesheet" href="css/components/card.css" />
   <link rel="stylesheet" href="css/components/tab.css" />
   <link rel="stylesheet" href="css/components/breadcrumb.css" />
+<link rel="stylesheet" href="css/common.css" />
 <link rel="stylesheet" href="css/faq.css" />
 </head>
 <body>
@@ -269,16 +269,16 @@
   <div class="wrap faq-wrap">
 
     <!-- 카테고리 탭 -->
-    <div class="faq-tabs" role="tablist">
-      <button class="faq-tab is-active" data-cat="booking">예약 · 결제</button>
-      <button class="faq-tab" data-cat="service">서비스</button>
-      <button class="faq-tab" data-cat="treatment">시술</button>
-      <button class="faq-tab" data-cat="shopping">쇼핑</button>
-      <button class="faq-tab" data-cat="etc">기타</button>
+    <div class="faq-tabs" role="tablist" aria-label="FAQ 카테고리">
+      <button class="faq-tab is-active" role="tab" id="tab-booking" data-cat="booking" aria-selected="true" aria-controls="panel-booking">예약 · 결제</button>
+      <button class="faq-tab" role="tab" id="tab-service" data-cat="service" aria-selected="false" aria-controls="panel-service">서비스</button>
+      <button class="faq-tab" role="tab" id="tab-treatment" data-cat="treatment" aria-selected="false" aria-controls="panel-treatment">시술</button>
+      <button class="faq-tab" role="tab" id="tab-shopping" data-cat="shopping" aria-selected="false" aria-controls="panel-shopping">쇼핑</button>
+      <button class="faq-tab" role="tab" id="tab-etc" data-cat="etc" aria-selected="false" aria-controls="panel-etc">기타</button>
     </div>
 
     <!-- 예약 · 결제 -->
-    <div class="faq-group" data-cat="booking">
+    <div class="faq-group" role="tabpanel" id="panel-booking" aria-labelledby="tab-booking" data-cat="booking">
       <p class="faq-group__label">예약 · 결제</p>
       <div class="acc">
         <div class="acc-item is-open">
@@ -309,7 +309,7 @@
     </div>
 
     <!-- 서비스 -->
-    <div class="faq-group" data-cat="service">
+    <div class="faq-group" role="tabpanel" id="panel-service" aria-labelledby="tab-service" data-cat="service">
       <p class="faq-group__label">서비스</p>
       <div class="acc">
         <div class="acc-item">
@@ -340,7 +340,7 @@
     </div>
 
     <!-- 시술 -->
-    <div class="faq-group" data-cat="treatment">
+    <div class="faq-group" role="tabpanel" id="panel-treatment" aria-labelledby="tab-treatment" data-cat="treatment">
       <p class="faq-group__label">시술</p>
       <div class="acc">
         <div class="acc-item">
@@ -371,7 +371,7 @@
     </div>
 
     <!-- 쇼핑 -->
-    <div class="faq-group" data-cat="shopping">
+    <div class="faq-group" role="tabpanel" id="panel-shopping" aria-labelledby="tab-shopping" data-cat="shopping">
       <p class="faq-group__label">코스메틱 쇼핑</p>
       <div class="acc">
         <div class="acc-item">
@@ -396,7 +396,7 @@
     </div>
 
     <!-- 기타 -->
-    <div class="faq-group" data-cat="etc">
+    <div class="faq-group" role="tabpanel" id="panel-etc" aria-labelledby="tab-etc" data-cat="etc">
       <p class="faq-group__label">기타</p>
       <div class="acc">
         <div class="acc-item">
@@ -607,8 +607,9 @@
   }
   tabs.forEach(function (tab) {
     tab.addEventListener('click', function () {
-      tabs.forEach(function (t) { t.classList.remove('is-active'); });
+      tabs.forEach(function (t) { t.classList.remove('is-active'); t.setAttribute('aria-selected', 'false'); });
       tab.classList.add('is-active');
+      tab.setAttribute('aria-selected', 'true');
       filterCat(tab.getAttribute('data-cat'));
     });
   });
@@ -621,8 +622,8 @@
   var closeBtn = document.getElementById('loginClose');
   var backdrop = document.getElementById('loginBackdrop');
   var gnbLoginBtn = document.querySelector('.gnb-login-btn');
-  function openModal() { modal.classList.add('is-open'); modal.setAttribute('aria-hidden', 'false'); document.body.style.overflow = 'hidden'; }
-  function closeModal() { modal.classList.remove('is-open'); modal.setAttribute('aria-hidden', 'true'); document.body.style.overflow = ''; }
+  function openModal() { modal.classList.add('is-open'); modal.setAttribute('aria-hidden', 'false'); document.body.style.overflow = 'hidden'; var first=modal.querySelector('input:not([type=hidden]),button:not([disabled])'); if(first) setTimeout(function(){first.focus();},50); }
+  function closeModal() { modal.classList.remove('is-open'); modal.setAttribute('aria-hidden', 'true'); document.body.style.overflow = ''; if(trigger) trigger.focus(); }
   if (trigger) trigger.addEventListener('click', function (e) { e.preventDefault(); openModal(); });
   if (gnbLoginBtn) gnbLoginBtn.addEventListener('click', function (e) { e.preventDefault(); openModal(); });
   if (closeBtn) closeBtn.addEventListener('click', closeModal);

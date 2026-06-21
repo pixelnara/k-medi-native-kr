@@ -12,8 +12,6 @@
   --gray-50: #f9f9f9; /* 배경 서피스 */
   --gray-150: #f0f0f0; /* 구분선·배경 */
   --gray-200: #d9d9d9; /* 보더 기본 */
-  --gray-250: #e7e7e7; /* 보더 기본 */
-  --gray-200: #b3b3b3; /* 보더 기본 */
   --gray-300: #c6c6c6; /* 연한 구분선 */
   --gray-400: #9b9b9b; /* 서브텍스트 약 */
   --gray-500: #6e6e6e; /* 본문 텍스트 */
@@ -28,38 +26,14 @@
 
   /* ── Blue Scale (#1e49ba 기준) ── */
   --blue-100: #eaedf5;
-  --blue-200: #c3cee9;
   --blue-300: #869fdf;
   --blue-400: #4a71d9;
   --blue-500: #1e49ba;
   --blue-600: #183b96;
-  --blue-700: #122d72;
-  --blue-800: #0c1e4d;
 
   /* ── Light Blue Scale (#25aae1 기준) ── */
-  --light-blue-100: #e5f4fc;
-  --light-blue-200: #64d5ff;
   --light-blue-300: #4fc7f5;
-  --light-blue-400: #3ab8eb;
   --light-blue-500: #25aae1;
-  --light-blue-700: #024873;
-
-  /* ── Amber Scale (#b08e31 기준) ── */
-  --amber-100: #fbf3d1;
-  --amber-200: #f4e1a3;
-  --amber-300: #e8c76f;
-  --amber-400: #d9ad3f;
-  --amber-500: #b08e31;
-  --amber-600: #8b6f26;
-  --amber-700: #6b511c;
-  --amber-800: #483613;
-  --amber-900: #241a0a;
-
-  /* ── Gold Scale (#9b7943 기준) ── */
-  --gold-500: #b8955e;
-  --gold-600: #9b7943; /* 브론즈 골드 기준색 */
-  --gold-700: #765b30;
-  --gold-800: #4f3c1f;
 
   /* ── Teal (contact phone icon) → 그레이 (색상 최소화) ── */
   --teal-50: var(--gray-50);
@@ -155,7 +129,7 @@
 
   --bg-white: var(--white); /* 흰색 배경 (body, header, card) */
   --bg-gray: var(--gray-150); /* 회색 배경 (accordion item) */
-  --bg-dark: #111111; /* 다크 배경 → 뉴트럴 블랙 (버텀바·trust·banner, 블루 틴트 제거) */
+  --bg-dark: var(--gray-950); /* 다크 배경 → 뉴트럴 블랙 (버텀바·trust·banner, 블루 틴트 제거) */
 
   /* ─── Semantic: Surface ─── */
   /* 섹션·컴포넌트 레벨 서피스 — section 구역·컬럼 배경 */
@@ -176,9 +150,9 @@
   --text-gray-7: var(--gray-950); /* 최강 강조 (모바일 헤더, login 제목) */
   --text-blue: var(--blue-500); /* 강조 */
   --text-white: var(--white); /* 다크/컬러 배경 위 흰색 */
-  --text-caption: var(--gray-900);
+  --text-caption: var(--blue-500);
   --text-caption2: var(--gray-500); /* 캡션·플로어 레이블 (골드→그레이) */
-  --rating: var(--gray-700); /* 별점·평점 (앰버→그레이) */
+  --rating: var(--blue-500); /* 별점·평점 */
 
   /* ─── Semantic: Border ─── */
   /* gray-1~4: 밝은(gray-200) → 어두운(gray-800) 순. warm = brown 계열 */
@@ -211,9 +185,6 @@
 
   /* ─── Navy Scale → 뉴트럴 다크 (블루 제거, 색상 최소화) ─── */
   --navy-900: #0d0e10; /* hero gradient 끝 */
-  --navy-800: #1b1c1f; /* hero gradient 시작 */
-  --navy-700: #1f2024; /* 예비 스케일 */
-  --navy-600: #17181b; /* 예비 스케일 */
 
   /* ─── Background: warm neutral ─── */
   --bg-warm: #f6f6f4; /* procedure · travel · skin-analysis 콘텐츠 영역 배경 */
@@ -253,6 +224,7 @@
   --type-h5: clamp(16px, 1.5vw, 20px); /* step 레이블, icon 레이블 */
   --type-body-lg: clamp(16px, calc(15px + 0.4vw), 18px); /* 리드 본문 */
   --type-body: clamp(15px, calc(14.5px + 0.25vw), 17px); /* 일반 본문 */
+  --type-body2: clamp(14px, calc(14px + 0.15vw), 15px); /* 보조 본문 */
 
   /* ─── Layout ─── */
 

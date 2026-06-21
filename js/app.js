@@ -45,8 +45,10 @@
   const closeBtn = document.querySelector(".gnb-overlay__close");
 
   if (overlay) {
+    var gnbOpener = null;
     openBtns.forEach(btn => {
       btn.addEventListener("click", () => {
+        gnbOpener = btn;
         overlay.classList.add("is-open");
         overlay.setAttribute("aria-hidden", "false");
         document.body.style.overflow = "hidden";
@@ -60,8 +62,25 @@
       document.querySelectorAll(".gnb-col.is-open").forEach(c => c.classList.remove("is-open"));
       document.querySelectorAll(".gnb-has-sub.is-open").forEach(s => s.classList.remove("is-open"));
       document.querySelectorAll(".gnb-has-sub2.is-open").forEach(s => s.classList.remove("is-open"));
+      if (gnbOpener) { gnbOpener.focus(); gnbOpener = null; }
     }
     if (closeBtn) closeBtn.addEventListener("click", closeOverlay);
+
+    // Focus trap: keep Tab/Shift+Tab inside overlay while open
+    overlay.addEventListener("keydown", function(e) {
+      if (e.key === "Escape") { closeOverlay(); return; }
+      if (e.key !== "Tab") return;
+      var focusable = Array.from(overlay.querySelectorAll(
+        'a[href], button:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex="-1"])'
+      )).filter(el => !el.closest('[aria-hidden="true"]'));
+      if (!focusable.length) return;
+      var first = focusable[0], last = focusable[focusable.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault(); last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault(); first.focus();
+      }
+    });
 
     // 로고 클릭 → 오버레이 닫기만 하고 페이지 이동 없음
     const overlayBrand = overlay.querySelector(".gnb-overlay__brand");

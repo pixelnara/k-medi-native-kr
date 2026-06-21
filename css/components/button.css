@@ -71,7 +71,7 @@
   color: var(--text-white);
 }
 .btn--primary2:hover {
-  background: var(--blue-500);
+  background: var(--blue-600);
 }
 /* Primary Outline — 명시적 outline 변형 (base .btn 외형과 동일) */
 .btn--primary-outline {
@@ -124,4 +124,19 @@
   background: var(--btn-primary);
   color: var(--text-white);
   border-color: var(--btn-primary);
+}
+
+/* ── Focus-visible (keyboard navigation) ─────────────────────── */
+.btn:focus-visible,
+.chip:focus-visible,
+.filter:focus-visible,
+.faq-tab:focus-visible,
+.tv-chip:focus-visible,
+.ihc__tab:focus-visible {
+  outline: 2px solid var(--blue-500);
+  outline-offset: 2px;
+}
+.link-arrow:focus-visible {
+  outline: 2px solid var(--blue-500);
+  outline-offset: 4px;
 }
