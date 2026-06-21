@@ -1184,7 +1184,8 @@ image-slot#cert-sgi {
   }
   .gnb-lang-tab {
     flex: 1;
-    padding: var(--space-14) 0;
+    padding: var(--space-18) 0;
+    min-height: 48px;
     font-size: var(--text-12);
     font-weight: 500;
     color: var(--text-gray-3);
@@ -1732,7 +1733,7 @@ body:has(.gnb-overlay.is-open) {
   }
   .gnb-has-sub.is-open .gnb-sub-list > li > a {
     display: block;
-    padding: var(--space-12) 0;
+    padding: var(--space-12) var(--space-8) var(--space-12) var(--space-16);
     font-size: var(--text-13);
     font-weight: 450;
     color: var(--text-gray-6);
@@ -1855,7 +1856,7 @@ body:has(.gnb-overlay.is-open) {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: var(--space-12) 0;
+    padding: var(--space-12) var(--space-8) var(--space-12) var(--space-16);
     font-size: var(--text-13);
     font-weight: 450;
     color: var(--text-gray-6);
@@ -1986,9 +1987,12 @@ body:has(.gnb-overlay.is-open) {
   .hero__inner {
     justify-content: flex-end;
     padding-top: var(--header-h);
-    padding-bottom: calc(72px + 16px + 30px);
+    padding-bottom: calc(80px + env(safe-area-inset-bottom, 0px) + 20px);
     align-items: center;
     text-align: center;
+  }
+  .hero__down-btn {
+    display: none;
   }
   
   .hero__title {
@@ -2255,7 +2259,10 @@ body:has(.gnb-overlay.is-open) {
     gap: var(--space-8) var(--space-20);
   }
   .footer dl {
-    grid-template-columns: 110px 1fr;
+    grid-template-columns: auto 1fr;
+  }
+  .footer dl dt {
+    white-space: nowrap;
   }
 
   /* Accordion */

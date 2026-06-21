@@ -41,6 +41,7 @@
   border-radius: 2px;
   overflow: hidden;
   border: 1px solid var(--border-gray-1);
+  gap: 0;
 }
 .faq-body .acc-item {
   border-bottom: 1px solid var(--border-gray-1);
@@ -118,8 +119,9 @@
     margin-bottom: var(--space-32);
   }
   .faq-tab {
-    padding: var(--space-8) var(--space-16);
-    font-size: var(--text-13);
+    padding: var(--space-12) var(--space-20);
+    font-size: var(--text-14);
+    min-height: 44px;
   }
   .faq-body .acc-head {
     font-size: var(--text-15, 15px);

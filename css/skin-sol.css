@@ -819,6 +819,14 @@
    RESPONSIVE
    ============================================================ */
 @media (max-width: 860px) {
+  /* Issue 3: 모바일에서 pss-nav 내 breadcrumb 중복 숨김 */
+  .pss-breadcrumb {
+    display: none;
+  }
+  /* Issue 5-2: 채팅 버튼 퀴즈 콘텐츠 충돌 방지 */
+  .chat-btn {
+    display: none;
+  }
   /* 퀴즈 좌우 화살표를 콘텐츠 아래로 이동 — 뷰포트가 100% 폭을 쓰도록 */
   .pss-quiz-outer {
     flex-wrap: wrap;
@@ -874,6 +882,11 @@
     grid-template-columns: 1fr;
     gap: var(--space-12);
   }
+  /* Issue 5-1: 가로 row 레이아웃에서 체크 아이콘을 수직 가운데 정렬 */
+  .pss-option__check {
+    top: 50%;
+    transform: translateY(-50%);
+  }
   .pss-option__card {
     flex-direction: row;
     align-items: center;
@@ -914,6 +927,74 @@
   .pss-analyze__btn {
     width: 100%;
     max-width: 360px;
+  }
+}
+
+/* ============================================================
+   RESULT MODAL — 모바일 전용 전체화면 오버레이
+   ============================================================ */
+/* 데스크탑: 모달 헤더 바 숨김 */
+.pss-result__modal-bar {
+  display: none;
+}
+
+@media (max-width: 860px) {
+  /* 결과 섹션 → 고정 전체화면 모달 */
+  .pss-result.is-visible {
+    position: fixed;
+    inset: 0;
+    z-index: 900;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    padding: 0;
+    background: var(--bg-white);
+    animation: none;
+  }
+  body.pss-modal-open {
+    overflow: hidden;
+  }
+  /* 모달 상단 바 (닫기 버튼 포함) */
+  .pss-result__modal-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background: var(--bg-white);
+    border-bottom: 1px solid var(--border-gray-1);
+    padding: 12px 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  }
+  .pss-result__modal-title {
+    font-size: var(--text-14);
+    font-weight: 600;
+    color: var(--text-gray-6);
+    letter-spacing: var(--tracking-tight);
+  }
+  .pss-result__close-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--surface-gray-1);
+    border: none;
+    color: var(--text-gray-6);
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background 0.2s;
+  }
+  .pss-result__close-btn:active {
+    background: var(--border-gray-1);
+  }
+  /* 콘텐츠 하단에 모바일 바 여백 확보 */
+  .pss-result.is-visible .wrap {
+    padding-bottom: calc(80px + env(safe-area-inset-bottom, 0px) + 24px);
   }
 }
 

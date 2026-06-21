@@ -113,6 +113,9 @@
 }
 
 @media (max-width: 480px) {
+  .prod-card__img-wrap {
+    padding-bottom: 75%;
+  }
   .prod-card__body {
     padding: var(--space-16) 0 var(--space-8);
   }

@@ -1331,9 +1331,12 @@
   .hero__inner {
     justify-content: flex-end;
     padding-top: var(--header-h);
-    padding-bottom: calc(72px + 16px + 30px);
+    padding-bottom: calc(80px + env(safe-area-inset-bottom, 0px) + 20px);
     align-items: center;
     text-align: center;
+  }
+  .hero__down-btn {
+    display: none;
   }
   .hero__title {
     margin-top: 0;

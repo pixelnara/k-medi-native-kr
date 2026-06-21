@@ -57,6 +57,7 @@
 .sa-tab-selector .tab-pill__btn.is-active {
   background: #c8694c;
   font-weight: 600;
+  color: #fff;
 }
 .sa-tab-selector .tab-pill__btn:hover:not(.is-active) {
   color: #333;
