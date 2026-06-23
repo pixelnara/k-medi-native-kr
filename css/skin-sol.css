@@ -155,6 +155,10 @@
   display: flex;
   flex-direction: column;
 }
+.pss-analyze-wrap {
+  order: 2;
+  margin-top: var(--space-8);
+}
 .pss-wrap {
   max-width: 900px;
 }
@@ -851,9 +855,6 @@
   }
   .pss-quiz {
     padding-bottom: 24px;
-  }
-  .pss-analyze-wrap {
-    margin-bottom: var(--space-8);
   }
   .pss-steps {
     gap: 0;
