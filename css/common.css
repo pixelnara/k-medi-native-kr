@@ -1583,7 +1583,7 @@ image-slot#cert-sgi {
   .gnb-overlay--dark .gnb-col a,
   .gnb-overlay--dark .gnb-sub-chevron,
   .gnb-overlay--dark .gnb-sub-list li a {
-    color: rgba(255, 255, 255, 0.55);
+    color: rgba(255, 255, 255, 0.8);
   }
   .gnb-overlay--dark .gnb-col > h4 {
     border-bottom-color: rgba(255, 255, 255, 0.15);
@@ -1592,7 +1592,7 @@ image-slot#cert-sgi {
     border-top-color: rgba(255, 255, 255, 0.15);
   }
   .gnb-overlay--dark .gnb-col ul.gnb-sub-list {
-    border-left-color: rgba(255, 255, 255, 0.2);
+    border-left-color: rgba(255, 255, 255, 0.5);
   }
   @media (hover: hover) {
     .gnb-overlay--dark .gnb-col a:hover {
@@ -1802,7 +1802,7 @@ image-slot#cert-sgi {
 }
 .gnb-col a {
   color: var(--gray-900);
-  opacity: 1; /* 흐릿함 제거 — 텍스트 뚜렷하게 */
+  opacity: 1;
   font-size: var(--text-16);
   letter-spacing: var(--tracking-tight);
   transition: 0.3s;
@@ -1828,15 +1828,6 @@ image-slot#cert-sgi {
 .gnb-overlay a:active,
 .gnb-overlay a:focus {
   text-decoration: none;
-}
-/* 신규화면 마커: 노랑 제거 → 일반 텍스트색. 구분은 텍스트 옆 * 로 (잠정, 내일 논의) */
-.gnb-col a.gnb-link--utility {
-  color: var(--gray-900);
-  opacity: 1;
-}
-.gnb-overlay--dark .gnb-col a.gnb-link--utility {
-  color: rgba(255, 255, 255, 0.92);
-  opacity: 1;
 }
 .gnb-link--utility::after {
   content: " *";
@@ -1876,19 +1867,25 @@ image-slot#cert-sgi {
 .gnb-col ul.gnb-sub-list {
   display: none;
   flex-direction: column;
+  gap: 0;
   margin-top: var(--space-8);
   margin-bottom: var(--space-8);
   padding-left: var(--space-16);
   border-left: 2px solid var(--border-gray-1);
-  line-height: 2.2;
+  /* line-height: 1.9; */
+  /* background-color: yellow; */
 }
 .gnb-col ul.gnb-sub-list--flat {
   margin-top: 0;
   margin-bottom: 0;
   border-left: none;
 }
+ul.gnb-sub-list.gnb-sub-list--flat {
+  padding-top: 12px;
+}
 .gnb-has-sub.is-open > ul.gnb-sub-list {
   display: flex;
+  line-height: 1.7;
 }
 .gnb-sub-list li a {
   font-size: var(--text-15);
@@ -1896,6 +1893,13 @@ image-slot#cert-sgi {
   color: var(--gray-900);
   line-height: 2.5;
   letter-spacing: var(--tracking-normal);
+}
+.gnb-proc-items li a,
+.gnb-overlay--dark .gnb-proc-items li a {
+  color: var(--menu-gray-200);
+  line-height: 2.5;
+  font-size: 14px;
+  font-weight: 700;
 }
 @media (hover: hover) {
   .gnb-col a:hover {
