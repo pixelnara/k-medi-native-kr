@@ -600,7 +600,8 @@
 .pd-feat-desc {
   color: var(--text-gray-6);
   font-size: var(--text-15);
-  font-weight: 400;
+  font-weight: 600;
+  letter-spacing: var(--tracking-normal);
 }
 .pd-feat-item {
   display: flex;

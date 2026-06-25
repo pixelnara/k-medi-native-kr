@@ -462,32 +462,35 @@
 
 /* Result Header */
 .pss-result__header {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   margin-bottom: clamp(40px, 6vw, 64px);
 }
 .pss-result__reset-btn {
-  position: absolute;
-  top: 0;
-  right: 0;
   display: inline-flex;
+  flex-direction: column;
   align-items: center;
-  gap: 5px;
-  padding: 6px 12px;
-  border-radius: var(--radius-full);
-  border: 1px solid var(--border-gray-1);
+  gap: 7px;
+  padding: 14px 32px;
+  margin-top: var(--space-32);
+  border-radius: 0;
+  border: 1px solid var(--edi-line);
   background: var(--bg-white);
   color: var(--text-gray-4);
   font-size: var(--text-12);
-  font-weight: 500;
+  font-weight: 600;
+  letter-spacing: var(--tracking-medium);
   cursor: pointer;
   transition:
     border-color 0.2s,
-    color 0.2s;
+    color 0.2s,
+    background 0.2s;
 }
 .pss-result__reset-btn:hover {
-  border-color: var(--text-gray-3);
-  color: var(--text-gray-6);
+  border-color: var(--edi-ink);
+  color: var(--edi-ink);
 }
 .pss-result__label {
   font-size: var(--text-12);
