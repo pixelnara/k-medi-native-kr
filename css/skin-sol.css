@@ -620,14 +620,14 @@
   letter-spacing: var(--tracking-normal);
   text-transform: uppercase;
   color: var(--blue-500);
-  margin-bottom: var(--space-12);
+  margin-bottom: var(--space-10);
 }
 .pss-comment-card__body {
   font-size: var(--text-16);
   color: var(--text-gray-6);
   line-height: 1.75;
   font-weight: 500;
-  margin-bottom: var(--space-20);
+  margin-bottom: var(--space-24);
 }
 .pss-focus__label {
   display: block;
@@ -635,7 +635,7 @@
   font-weight: 700;
   letter-spacing: var(--tracking-normal);
   text-transform: uppercase;
-  color: var(--text-gray-4);
+  color: var(--text-gray-7);
   margin-bottom: var(--space-10);
 }
 
