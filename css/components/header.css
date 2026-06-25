@@ -506,6 +506,9 @@
 }
 
 @media (max-width: 860px) {
+  .header__right {
+    gap: 6px;
+  }
   .gnb-mobile-top {
     display: block;
     margin-left: calc(-1 * var(--gutter));

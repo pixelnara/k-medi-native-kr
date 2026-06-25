@@ -39,7 +39,7 @@ body {
   padding: clamp(56px, 9vw, 132px) 0;
 }
 .section--surface {
-  background: var(--surface-gray-2);
+  background: #ededed;
 }
 /* Eyebrow / section label — the ONLY place --caption is used */
 .eyebrow {
@@ -1569,7 +1569,8 @@ REVEAL ON SCROLL ============================================================ */
   gap: var(--space-16);
   border-top: 3px solid var(--gray-950);
   padding-top: clamp(16px, 2vw, 24px);
-  margin-bottom: clamp(22px, 3.5vw, 44px);
+  /* 섹션 제목 ↔ intro 사이 여백 (전역 공통 관리 포인트) */
+  margin-bottom: clamp(12px, 2vw, 28px);
   text-align: left;
 }
 .ed-head__title {
@@ -1616,7 +1617,7 @@ REVEAL ON SCROLL ============================================================ */
     padding-top: 0;
   }
   .ed-head__title {
-    font-size: clamp(24px, 7vw, 26px);
+    font-size: clamp(20px, 4vw, 26px);
   }
   .ed-head__more {
     font-size: var(--text-11);
