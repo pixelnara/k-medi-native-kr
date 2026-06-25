@@ -379,7 +379,7 @@
   var hairTrack = document.getElementById('pssHairTrack');
   var hairSlides = hairTrack ? hairTrack.querySelectorAll('.pss-hair-slide') : [];
   var hairTabBtns = document.querySelectorAll('.pss-hair-tab');
-  var hairDots = document.querySelectorAll('.pss-hair-dot');
+  var hairCount = document.getElementById('pssHairCount');
   var hairPrev = document.getElementById('pssHairPrev');
   var hairNext = document.getElementById('pssHairNext');
   var currentHairSlide = 0;
@@ -392,18 +392,13 @@
       t.classList.toggle('is-active', i === idx);
       t.setAttribute('aria-selected', i === idx ? 'true' : 'false');
     });
-    hairDots.forEach(function(d, i) {
-      d.classList.toggle('is-active', i === idx);
-    });
+    if (hairCount) hairCount.textContent = (idx + 1) + ' / ' + hairSlides.length;
     if (hairPrev) hairPrev.disabled = idx === 0;
     if (hairNext) hairNext.disabled = idx === hairSlides.length - 1;
   }
 
   hairTabBtns.forEach(function(btn) {
     btn.addEventListener('click', function() { goHairSlide(parseInt(this.dataset.htab)); });
-  });
-  hairDots.forEach(function(dot) {
-    dot.addEventListener('click', function() { goHairSlide(parseInt(this.dataset.htab)); });
   });
   if (hairPrev) hairPrev.addEventListener('click', function() { goHairSlide(currentHairSlide - 1); });
   if (hairNext) hairNext.addEventListener('click', function() { goHairSlide(currentHairSlide + 1); });

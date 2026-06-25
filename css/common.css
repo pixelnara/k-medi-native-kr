@@ -1130,7 +1130,10 @@ image-slot#cert-sgi {
     height: 2.5px;
   }
   .header-mypage-btn {
-    display: none;
+    /* 모바일 상단바: 로그인(마이페이지) 아이콘 숨김
+       - 각 페이지 CSS의 .header-right--v2{display:flex}가 이후 로드되어
+         동일 명시도로 덮어쓰므로 !important로 확실히 숨김 처리 */
+    display: none !important;
   }
   .header-mypage-btn svg {
     width: 22px;

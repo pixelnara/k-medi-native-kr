@@ -620,9 +620,9 @@
     }
   }
   .gnb-lang-tab.is-active {
-    color: var(--text-white);
+    color: var(--text-gray-7);
     font-weight: 700;
-    background: var(--blue-500);
+    background: var(--gray-100);
   }
 }
 

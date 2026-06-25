@@ -1232,19 +1232,19 @@
   margin-bottom: var(--space-40);
 }
 
-/* Nav */
+/* Nav — cosmetic.html 하단 페이지네이션과 동일 (좌버튼 · 1/N · 우버튼) */
 .pss-hair-nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: var(--space-20);
+  gap: 0;
   margin-top: var(--space-40);
 }
 .pss-hair-nav__btn {
-  width: 40px;
-  height: 40px;
-  border-radius: var(--radius-full);
-  border: 1.5px solid var(--border-gray-1);
+  width: 120px;
+  height: var(--space-48);
+  border-radius: 0;
+  border: 1px solid var(--border-gray-2);
   background: var(--bg-white);
   color: var(--text-gray-5);
   display: flex;
@@ -1252,45 +1252,44 @@
   justify-content: center;
   cursor: pointer;
   transition:
-    border-color 0.2s,
-    color 0.2s,
-    background 0.2s;
+    background 0.15s,
+    color 0.15s;
 }
 @media (hover: hover) {
-  .pss-hair-nav__btn:hover {
-    border-color: var(--accent-gray-1);
-    color: var(--accent-gray-1);
+  .pss-hair-nav__btn:hover:not(:disabled) {
+    background: var(--surface-gray-1);
+    color: var(--text-gray-7);
   }
 }
 .pss-hair-nav__btn:disabled {
   opacity: 0.3;
   cursor: default;
 }
-.pss-hair-dots {
-  display: flex;
-  gap: var(--space-8);
-}
-.pss-hair-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: var(--radius-full);
-  border: none;
-  background: var(--gray-300);
-  cursor: pointer;
-  padding: 0;
-  transition:
-    background 0.2s,
-    width 0.2s;
-}
-.pss-hair-dot.is-active {
-  background: var(--accent-gray-1);
-  width: 24px;
+.pss-hair-nav__count {
+  min-width: 100px;
+  text-align: center;
+  font-size: var(--text-17);
+  font-weight: 400;
+  color: var(--text-gray-5);
+  letter-spacing: var(--tracking-snug);
 }
 
 /* ── Responsive ── */
 @media (max-width: 860px) {
+  /* 추천 성분(헤어): 가로 스크롤 캐러셀 — 2장 + 3번째 피킹.
+     overflow:hidden 슬라이더 안이라 풀블리드(margin) 없이 처리 */
   .pss-hair-ings {
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    gap: var(--space-12);
+    padding-bottom: var(--space-12);
+  }
+  .pss-hair-ings::-webkit-scrollbar {
+    display: none;
   }
   /* 모바일: 카드 스트립 우측 풀블리드 + 좌측 여백 확보 */
   .pss-rec-strip {
@@ -1315,9 +1314,5 @@
   .pss-hair-tab {
     padding: 10px 18px;
     font-size: var(--text-14);
-  }
-  .pss-hair-ings {
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-12);
   }
 }
