@@ -520,7 +520,7 @@
 .why-journey__icon-desc {
   font-family: var(--font-sans);
   font-size: var(--type-body2);
-  font-weight: 400;
+  font-weight: 440;
   color: var(--text-gray-5);
   line-height: 1.85;
   letter-spacing: var(--tracking-tight);
@@ -908,8 +908,9 @@
   display: block;
   margin-top: var(--space-8);
   font-size: var(--text-14);
-  color: var(--text-gray-2);
+  color: var(--text-gray-5);
   letter-spacing: var(--tracking-loose);
+  font-weight: 600;
 }
 .treat-highlight {
   color: var(--text-gray-7);
@@ -1153,7 +1154,7 @@
 .news-card__desc {
   color: var(--text-gray-4);
   font-size: var(--text-15);
-  font-weight: 400;
+  font-weight: 480;
   line-height: 1.8;
   margin-top: var(--space-10);
 }
