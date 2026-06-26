@@ -1420,7 +1420,7 @@
   color: var(--text-gray-4);
   font-size: var(--text-15);
   font-weight: 500;
-  line-height: 1.8;
+  line-height: 2.15;
   margin-top: var(--space-12);
   letter-spacing: var(--tracking-tighter);
 }
