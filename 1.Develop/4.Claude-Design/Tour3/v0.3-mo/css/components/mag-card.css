@@ -11,8 +11,10 @@
   padding: clamp(20px, 2.5vw, 36px) 0;
   border-bottom: 1px solid var(--gray-200);
   padding-right: clamp(16px, 2vw, 32px);
+  min-width: 0;
 }
 .mag-card:nth-child(3n) {
+  padding-left: clamp(16px, 2vw, 32px);
   padding-right: 0;
 }
 .mag-card:nth-child(3n-1) {

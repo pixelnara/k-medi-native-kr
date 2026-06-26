@@ -138,6 +138,11 @@
   justify-content: flex-start;
   padding: var(--space-32) 0 var(--space-16);
 }
+@media (min-width: 861px) {
+  .footer__top-wrap {
+    justify-content: center;
+  }
+}
 .footer__top-btn {
   display: flex;
   flex-direction: column;
