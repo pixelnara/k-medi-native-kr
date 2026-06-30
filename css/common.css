@@ -537,7 +537,7 @@ image-slot#cert-sgi {
   width: var(--space-48);
   height: var(--space-48);
   border-radius: var(--radius-full);
-  background: var(--blue-100);
+  background: var(--blue-600);
   color: var(--text-white);
   display: flex;
   align-items: center;
@@ -1924,6 +1924,12 @@ html {
 * {
   -webkit-tap-highlight-color: transparent;
 }
-a, button, [role="button"], input, select, textarea, label {
+a,
+button,
+[role="button"],
+input,
+select,
+textarea,
+label {
   touch-action: manipulation;
 }
