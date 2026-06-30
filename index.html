@@ -230,6 +230,11 @@
                 <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
               </svg>
             </button>
+            <!-- 언어 선택 -->
+            <button class="header-lang-btn mbar-lang header-right-lang-btn" aria-label="언어변경">
+              <svg class="header-lang-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              <span class="header-lang-code">KR</span>
+            </button>
             <!-- 햄버거 메뉴 -->
             <button class="menu-btn header-menu-btn" aria-label="메뉴">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -548,37 +553,38 @@
       <!-- ============================== HERO ============================== -->
       <section class="hero">
         <div class="hero__slides">
-          <!-- 1번 고정: 브랜드 메시지 -->
+          <!-- 1. 브랜드 메시지 -->
           <div
             class="hero__slide hero__slide--hanbok"
             data-title="의료부터 관광까지<br/>모든 케어"
-            data-desc="체크인부터 귀국까지 퍼스널 컨시어지가 함께합니다."
+            data-desc="전담 코디네이터가 당신만의 맞춤 케어로 특별한 한국 여행을 완성합니다."
           ></div>
-          <!-- 2.뷰티 -->
-          <div
-            class="hero__slide hero__slide--event"
-            style="background-image: url(&quot;assets/img/1-page-home/01_main_banner/hero-5.png&quot;)"
-            data-title="당신만을 위한<br> 맞춤 K-뷰티 서비스"
-            data-desc="검증된 의료 서비스와 프리미엄 케어를 경험하세요."
-          ></div>
-          <!-- 4.여행 -->
+          <!-- 2. K-뷰티 솔루션 -->
           <div
             class="hero__slide"
-            style="background-image: url(&quot;assets/img/1-page-home/01_main_banner/hero-15.png&quot;)"
-            data-title="서울의 아름다움<br/>그 중심에서"
-            data-desc="한국의 전통과 현대가 어우러진 특별한 시간"
+            style="background-image: url(&quot;assets/img/1-page-home/01_main_banner/hero-17.png&quot;)"
+            data-title="당신만을 위한<br/>맞춤 K-뷰티 솔루션"
+            data-desc="검증된 의료 서비스와 프리미엄 케어를 경험하세요."
           ></div>
+          <!-- 3. K-뷰티 컬렉션 -->
+          <div
+            class="hero__slide"
+            style="background-image: url(&quot;assets/img/1-page-home/01_main_banner/hero-14.png&quot;)"
+            data-title="프리미엄 K-뷰티 컬렉션"
+            data-desc="한국 여행의 특별함을 완성하는 뷰티 쇼핑 경험"
+          ></div>
+          <!-- 4. 전통 경험 (PC/모바일 이미지 분리) -->
+          <div
+            class="hero__slide hero__slide--hero23"
+            data-title="한국을 가장 깊이<br/>경험하는 방법"
+            data-desc="한국의 전통이 살아 숨쉬는 특별한 순간을 만나보세요."
+          ></div>
+          <!-- 5. 천년의 아름다움 -->
           <div
             class="hero__slide"
             style="background-image: url(&quot;assets/img/1-page-home/01_main_banner/hero-20.jpeg&quot;)"
-            data-title="천년의 역사<br/>고궁 투어"
-            data-desc="조선의 아름다움을 간직한 고궁에서의 특별한 경험"
-          ></div>
-          <div
-            class="hero__slide hero__slide--mobile-only"
-            style="background-image: url(&quot;assets/img/1-page-home/06_others/main1.png&quot;)"
-            data-title="특별한 당신을 위한<br/>프리미엄 혜택"
-            data-desc="호텔과 면세점, 모두 특별한 우대 혜택으로 더 럭셔리하게"
+            data-title="천년의 아름다움을 만나다"
+            data-desc="고유의 전통 미학을 통해 경험하는 한국"
           ></div>
         </div>
         <div class="hero__overlay"></div>
