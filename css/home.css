@@ -45,41 +45,41 @@
   }
 }
 .hero__slide--first {
-  background-image: url("../assets/img/1-page-home/01_main_banner/peoplel_sea_desat.png");
+  background-image: url("../assets/img/1-page-home/01_main_banner/leaves.png");
   background-position: center center;
 }
 @media (max-width: 860px) {
   .hero__slide--first {
-    background-image: url("../assets/img/1-page-home/01_main_banner/peoplel_sea_mo_desat.jpg");
+    background-image: url("../assets/img/1-page-home/01_main_banner/leaves.png");
     background-position: center center;
   }
 }
 .hero__slide--2nd {
-  background-image: url("../assets/img/1-page-home/01_main_banner/peoplel_sea_desat.png");
+  background-image: url("../assets/img/1-page-home/01_main_banner/dark-blue.png");
   background-position: center center;
 }
 @media (max-width: 860px) {
   .hero__slide--2nd {
-    background-image: url("../assets/img/1-page-home/01_main_banner/peoplel_sea_mo_desat.jpg");
+    background-image: url("../assets/img/1-page-home/01_main_banner/dark-blue.png");
     background-position: center center;
   }
 }
 .hero__slide--3rd {
-  background-image: url("../assets/img/1-page-home/01_main_banner/peoplel_sea_desat.png");
+  background-image: url("../assets/img/1-page-home/01_main_banner/dark-blue.png");
   background-position: center center;
 }
 .hero__slide--4th {
-  background-image: url("../assets/img/1-page-home/01_main_banner/peoplel_sea_desat.png");
+  background-image: url("../assets/img/1-page-home/01_main_banner/dark-blue.png");
   background-position: center center;
 }
 @media (max-width: 860px) {
   .hero__slide--4th {
-    background-image: url("../assets/img/1-page-home/01_main_banner/peoplel_sea_desat.png");
+    background-image: url("../assets/img/1-page-home/01_main_banner/leaves.png");
     background-position: center center;
   }
 }
 .hero__slide--5th {
-  background-image: url("../assets/img/1-page-home/01_main_banner/peoplel_sea_desat.png");
+  background-image: url("../assets/img/1-page-home/01_main_banner/leaves.png");
   background-position: center center;
 }
 .hero__slide::after {
